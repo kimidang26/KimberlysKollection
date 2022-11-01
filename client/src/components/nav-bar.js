@@ -1,9 +1,8 @@
 // src/components/nav-bar.js
 
 import React from 'react';
-
-
 import AuthNav from './auth-nav';
+import TabBar from './tab-bar';
 
 const NavBar = () => {
   return (
@@ -12,6 +11,8 @@ const NavBar = () => {
         <div className="container">
           <div className="navbar-brand logo" />
           <AuthNav />
+          <h6> Add Ternaray Operator</h6>
+          <TabBar />
         </div>
       </nav>
     </div>
