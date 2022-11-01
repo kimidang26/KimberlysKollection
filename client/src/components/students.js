@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import Form from "./form";
 
-function Students() {
+function Students(props) {
+
+  let user = props.user;
   
   // this is my original state with an array of students 
   const [students, setStudents] = useState([]);
@@ -88,7 +90,8 @@ function Students() {
           }
         })}
       </ul>
-      <Form saveStudent={addStudent} />
+      {!user ? (<h4>Please sign up in order to add students</h4>): (<Form saveStudent={addStudent} />)}
+      
     </div>
   );
 }

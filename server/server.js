@@ -14,6 +14,30 @@ app.get('/', (req, res) => {
   res.json({ message: 'Hello from My template ExpressJS' });
 });
 
+// GET REQUEST FOR WOMENS CLOTHING
+app.get('/womensclothing', (req, res) => {
+  let URL = `https://fakestoreapi.com/products/category/women's clothing`;
+  console.log("Womens Clothing was recieved")
+    fetch(URL)
+    .then((response) => response.json())
+    .then((data) => {
+      res.send(data);
+    });
+  });
+
+
+// GET REQUEST FOR MENS CLOTHING
+app.get('/mensclothing', (req, res) => {
+  let LINK = `https://fakestoreapi.com/products/category/men's clothing`;
+  console.log("Mens Clothing was recieved")
+    fetch(LINK)
+    .then((response) => response.json())
+    .then((data) => {
+      res.send(data);
+    });
+  });
+
+
 // create the get request
 app.get('/api/students', cors(), async (req, res) => {
   // const STUDENTS = [
