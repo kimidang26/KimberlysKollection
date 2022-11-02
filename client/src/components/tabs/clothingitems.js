@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import "./clothingitem.css";
  
 
 
@@ -41,8 +41,8 @@ const Items = () => {
                   <img className="card-img-top" src={shirt.image} alt="Card image cap" />
                    <div className="card-body">
                     <h5 className="card-title">{shirt.title}</h5>
-                    <p className="card-text">{shirt.rating.rate}</p>
-                    <p className="card-text">{shirt.price}</p> 
+                    <p className="card-text">Rating: {shirt.rating.rate}</p>
+                    <p className="card-text">Price: {shirt.price}</p> 
                   </div>
                 </div>
               );
@@ -56,8 +56,8 @@ const Items = () => {
               <img className="card-img-top" src={boy.image} alt="Card image cap" />
               <div className="card-body">
                 <h5 className="card-title">{boy.title}</h5>
-                <p className="card-text">{boy.rating.rate}</p>
-                <p className="card-text">{boy.price}</p> 
+                <p className="card-text">Rating: {boy.rating.rate}</p>
+                <p className="card-text">Price: {boy.price}</p> 
               </div>
             </div>
           );
