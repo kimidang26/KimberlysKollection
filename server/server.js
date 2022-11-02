@@ -5,7 +5,7 @@ const db = require('./db/db-connection.js');
 
 const app = express();
 
-const PORT = 8080;
+const PORT = 2626;
 app.use(cors());
 app.use(express.json());
 
@@ -103,6 +103,11 @@ app.delete('/api/students/:studentId', cors(), async (req, res) =>{
 
 });
 
+
+// create the POST request
+app.post('/api/me', cors(), async (req, res) => {
+  console.log(req.body);
+});
 
 
 // console.log that your server is up and running

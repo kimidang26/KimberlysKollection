@@ -3,7 +3,8 @@ import NavBar from "./components/nav-bar";
 import Students from "./components/students";
 import {useAuth0} from "@auth0/auth0-react";
 import Loading from "./components/loading";
-import {Route, Routes} from 'react-router-dom';
+import {Route, Routes, Link} from 'react-router-dom';
+import Profile from "./components/profile";
 
 
 function App() {
@@ -21,9 +22,10 @@ function App() {
     <div id="app" className="d-flex flex-column h-100">
       <NavBar />
       <div className="container flex-grow-1">
-          {!user ? <a>"Hello from Techtonica " </a>  : <a> Hello {user.nickname}</a>}
+          {!user ? <a>"Hello from Techtonica " </a>  : <span> Hello <Link to="api/me">{user.nickname}</Link> </span>}
           <Routes>
             <Route path="/" element ={<Students user={user}/>} />
+            <Route path="/api/me" element ={<Profile user={user}/>} />
           </Routes>
       </div>
     </div>
