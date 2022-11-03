@@ -109,10 +109,21 @@ app.post('/api/me', cors(), async (req, res) => {
     sub: req.body.sub,
   }
   console.log(newUser, "Kim the name, email, sub is fetched");
+
+  const queryEmail = 'SELECT * FROM users WHERE email=$1 LIMIT 1';
+  const valuesEmail = [newUser.email]
+  const resultsEmail = await db.query(queryEmail, valuesEmail);
+  if (resultsEmail.length > 0 ){
+    console.log(`Thank you old user for coming back`)
+  } else {
+
   const query = 'INSERT INTO users (name, email, sub) VALUES ($1, $2, $3) RETURNING *'
   const values = [newUser.name, newUser.email, newUser.sub]
   const result = await db.query(query, values);
-  console.log(result.rows[0]);
+  console.log(result, "line 123 works");
+
+  }
+
 });
 
 
