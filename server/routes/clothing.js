@@ -1,4 +1,5 @@
 import express from "express";
+import cors from 'cors';
 // import { restart } from "nodemon";
 // import db from "../db/db-connection.js";
 const router = express.Router();
@@ -30,6 +31,18 @@ router.get("/", async (req, res) => {
 
   let output = [...men, ...women];
   return res.json(output);
+});
+
+
+router.post("/additems", cors(), async (req, res) => {
+  const newAddItem = { id: req.body.id };
+  console.log([newAddItem.id]);
+  const result = await db.query(
+    "INSERT INTO items_ordered(product_id) VALUES($1) RETURNING *",
+    [newAddItem.id]
+  );
+  console.log(result.rows[0]);
+  res.json(result.rows[0]);
 });
 
 

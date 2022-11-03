@@ -6,21 +6,48 @@ import "./clothingitem.css";
 const Items = () => {
   const [shirts, setShirts] = useState([]); 
 
-
-  useEffect(async () => {
-    await fetch("http://localhost:2626/clothing")
+//get and fetch the data
+  const getItems = () =>{
+    fetch("http://localhost:2626/clothing")
       .then((response) => response.json())
-      .then((data) => {
-        setShirts(data);
-        
+      .then((shirts) => {
+        setShirts(shirts);
       });
-  }, []);
+  }
+  
+    useEffect(() => {
+      getItems();
+    }, []);
+
+
+  // useEffect(async () => {
+  //   await fetch("http://localhost:2626/clothing")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setShirts(data);
+        
+  //     });
+  // }, []);
 
   const addShirts = (newShirts) => {
     setShirts((shirts) => [...shirts, newShirts]);
   };
 
-
+  //post to add the items to cart
+  const postAddItems = (newAddItem) => {
+    return fetch("http://localhost:2626/additems", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newAddItem),
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log("Add item to cart ", data);
+        getItems();
+      });
+  };
 
   if(!shirts){
         return <div>Loading...</div>
