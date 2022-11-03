@@ -5,10 +5,10 @@ import "./clothingitem.css";
 
 const Items = () => {
   const [shirts, setShirts] = useState([]); 
-  const [boys, setBoys] = useState([]); 
 
-  useEffect(() => {
-    fetch("http://localhost:2626/womensclothing")
+
+  useEffect(async () => {
+    await fetch("http://localhost:2626/clothing")
       .then((response) => response.json())
       .then((data) => {
         setShirts(data);
@@ -16,17 +16,13 @@ const Items = () => {
       });
   }, []);
 
-  useEffect(() => {
-    fetch("http://localhost:2626/mensclothing")
-      .then((response) => response.json())
-      .then((data) => {
-        setBoys(data);
-        
-      });
-  }, []);
+  const addShirts = (newShirts) => {
+    setShirts((shirts) => [...shirts, newShirts]);
+  };
 
 
-  if(!shirts || !boys){
+
+  if(!shirts){
         return <div>Loading...</div>
     } else { 
 
@@ -48,23 +44,6 @@ const Items = () => {
               );
               })}
         </div>
-
-        <div className="card">
-          {boys.map((boy, index) => {
-          return (
-            <div>
-              <img className="card-img-top" src={boy.image} alt="Card image cap" />
-              <div className="card-body">
-                <h5 className="card-title">{boy.title}</h5>
-                <p className="card-text">Rating: {boy.rating.rate}</p>
-                <p className="card-text">Price: {boy.price}</p> 
-              </div>
-            </div>
-          );
-          })}
-
-
-         </div>
       </div>
 
     )

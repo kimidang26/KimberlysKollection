@@ -5,6 +5,7 @@ import {useAuth0} from "@auth0/auth0-react";
 import Loading from "./components/loading";
 import {Route, Routes, Link} from 'react-router-dom';
 import Profile from "./components/profile";
+import Items from "./components/tabs/clothingitems"
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Routes>
             <Route path="/" element ={<Students user={user}/>} />
             <Route path="/api/me" element ={<Profile user={user}/>} />
+            <Route path="/clothing" element={<Items />} />
           </Routes>
       </div>
     </div>

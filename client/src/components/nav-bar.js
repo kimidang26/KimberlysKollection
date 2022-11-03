@@ -2,7 +2,8 @@
 
 import React from 'react';
 import AuthNav from './auth-nav';
-import TabBar from './tab-bar';
+// import TabBar from './tab-bar';
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -12,7 +13,21 @@ const NavBar = () => {
           <div className="navbar-brand logo" />
           <AuthNav />
           <h6> Add Ternaray Operator</h6>
-          <TabBar />
+          {/* <TabBar /> */}
+          <div className="navigation"> 
+              <br></br>
+                  <Link to="/"> Home Page</Link>
+              <br></br>
+              <br></br>
+                  <Link to="/clothing"> Items</Link>
+              <br></br>
+              {/* <br></br>
+                  <Link to="/about"> About</Link>
+              <br></br>
+              <br></br>
+                  <Link to="/contact"> Contact</Link> */}
+              <br></br>
+          </div>
         </div>
       </nav>
     </div>
