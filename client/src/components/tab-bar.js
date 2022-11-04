@@ -12,30 +12,6 @@ const Home = () => {
     )
   }
   
-  // const Items = () => {
-  //   return (
-  //     <h1>
-  //       This is a Items component
-  //     </h1>
-  //   )
-  // }
-  
-  
-  // const Cart = () => {
-  //   return (
-  //     <h1>
-  //       This is the cart component
-  //     </h1>
-  //   )
-  // }
-  
-  // const History = () => {
-  //   return (
-  //     <h1>
-  //       This is the history component
-  //     </h1>
-  //   )
-  // }
   
   const TabBar = () =>  {
     const [currentView, setCurrentView] = useState('home');

@@ -13,6 +13,7 @@ const NavBar = () => {
           <div className="navbar-brand logo" />
           <AuthNav />
           <h6> Add Ternaray Operator</h6>
+          <span>0</span>
           {/* <TabBar /> */}
           <div className="navigation"> 
               <br></br>

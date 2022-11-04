@@ -17,7 +17,7 @@ dotenv.config()
 import clothingRouter from "./routes/clothing.js";
 
 const app = express();
-const PORT = 2626;
+const PORT = 2026;
 
 app.use(cors());
 app.use(express.json());

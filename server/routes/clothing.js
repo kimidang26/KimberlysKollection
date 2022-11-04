@@ -1,5 +1,6 @@
 import express from "express";
 import cors from 'cors';
+import db from "../db/db-connection.js";
 // import { restart } from "nodemon";
 // import db from "../db/db-connection.js";
 const router = express.Router();
@@ -35,15 +36,35 @@ router.get("/", async (req, res) => {
 
 
 router.post("/additems", cors(), async (req, res) => {
+  // from data or from db? i think its from data from front end?
   const newAddItem = { id: req.body.id };
   console.log([newAddItem.id]);
-  const result = await db.query(
-    "INSERT INTO items_ordered(product_id) VALUES($1) RETURNING *",
-    [newAddItem.id]
-  );
-  console.log(result.rows[0]);
-  res.json(result.rows[0]);
+
+  //from created orders select data from users and completed orders
+  const queryUserId = 'SELECT * FROM created_order WHERE user_id=$1 order_completed=$2 LIMIT 2';
+  const valuesUserId = [newAddItem.user_id]
+  const completedItem = [newAddItem.order_completed]
+  const resultUserId = await db.query (queryUserId, valuesUserId, completedItem);
+
+
+    //if the user id exists and order is not completed then in items ordered table add product id and order id
+  if ( valuesUserId.length > 0 && completedItem === false){ 
+    console.log("We got the status kamily")
+    const queryItem = 'INSERT INTO items_ordered (product_id, order_id) VALUES ($1, $2) RETURNING *'
+    const valuesItem = [newAddItem.product_id, newAddItem.order_id]
+    const cart = await db.query(queryItem, valuesItem);
+    console.log(cart, "cart is added")
+  } else {
+
+  }
 });
+
+// router.delete("/additems", cors(), async (req, res) => {
+//   const deleteId = req.body.id;
+//   console.log(req.body);
+//   await db.query("DELETE FROM items_ordered WHERE id=$1", [deleteId]);
+//   res.status(200).end();
+// });
 
 
 
