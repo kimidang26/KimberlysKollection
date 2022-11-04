@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 
 
 app.use("/clothing", clothingRouter);
-app.use("/addItems", clothingRouter);
+// app.use("/addItems", clothingRouter);
 
 
 // creates an endpoint for the route /api

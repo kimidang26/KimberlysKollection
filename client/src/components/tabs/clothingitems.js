@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./clothingitem.css";
+import { useAuth0 } from "@auth0/auth0-react";
  
 
 
@@ -8,10 +9,35 @@ const Items = () => {
   const [shirts, setShirts] = useState([]); 
   const [cart, setCart] = useState([]);
   console.log("cart items", cart);
+  const {user} = useAuth0();
+  console.log("user id:" , user.sub);
 
-  const addToCart = (shirt) => {
+  const addToCart = async (shirt) => {
     console.log('we are in cart')
+    console.log(user.sub)
     setCart([...cart, shirt])
+
+      const newAdd = {
+        sub: user.sub,
+        id: shirt.id,
+      }
+
+      //DATA FROM USER
+      console.log(newAdd, "Added New Items Here Kimberly");
+
+      //POST where it sends item and sub/id to server
+      const response = await fetch('http://localhost:2026/clothing/additems', {
+          method: 'POST',
+          headers: {
+              Accept: 'application/json',
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(newAdd)
+      });
+      const content = await response.json();
+      //DATA FROM SERVER
+      console.log(content,"kimberly here");
+
 
   };
 
