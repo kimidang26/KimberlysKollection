@@ -38,7 +38,7 @@ router.get("/", async (req, res) => {
 //
 
 router.post("/additems", cors(), async (req, res) => {
-  //asks for data on the frontend
+  //asks for USER ID and sub data on the frontend
   const newAddItem = { 
     id: req.body.id,
     sub: req.body.sub,

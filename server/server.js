@@ -15,6 +15,7 @@ dotenv.config()
 
 //routes
 import clothingRouter from "./routes/clothing.js";
+import cartRouter from "./routes/itemsordered.js";
 
 const app = express();
 const PORT = 2026;
@@ -26,6 +27,7 @@ app.use(bodyParser.json());
 
 app.use("/clothing", clothingRouter);
 // app.use("/addItems", clothingRouter);
+app.use
 
 
 // creates an endpoint for the route /api
