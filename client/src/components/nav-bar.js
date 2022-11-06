@@ -12,7 +12,6 @@ const NavBar = () => {
         <div className="container">
           <div className="navbar-brand logo" />
           <AuthNav />
-          <h6> Add Ternaray Operator</h6>
           {/* <TabBar /> */}
           <div className="navigation"> 
               <br></br>
