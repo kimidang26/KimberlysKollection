@@ -18,7 +18,7 @@ import clothingRouter from "./routes/clothing.js";
 import cartRouter from "./routes/itemsordered.js";
 
 const app = express();
-const PORT = 2026;
+const PORT = 2620;
 
 app.use(cors());
 app.use(express.json());
@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 
 app.use("/clothing", clothingRouter);
 // app.use("/addItems", clothingRouter);
-app.use
+app.use("/cart", cartRouter);
 
 
 // creates an endpoint for the route /api

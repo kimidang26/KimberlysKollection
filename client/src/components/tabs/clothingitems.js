@@ -10,7 +10,7 @@ const Items = () => {
   const [cart, setCart] = useState([]);
   console.log("cart items", cart);
   const {user} = useAuth0();
-  console.log("user id:" , user.sub);
+  // console.log("user id:" , user.sub);
 
   const addToCart = async (shirt) => {
     console.log('we are in cart')
@@ -26,7 +26,7 @@ const Items = () => {
       console.log(newAdd, "Added New Items Here Kimberly");
 
       //POST where it sends item and sub/id to server
-      const response = await fetch('http://localhost:2026/clothing/additems', {
+      const response = await fetch('http://localhost:2620/clothing/additems', {
           method: 'POST',
           headers: {
               Accept: 'application/json',
@@ -43,7 +43,7 @@ const Items = () => {
 
 //get and fetch the data
   const getItems = () =>{
-    fetch("http://localhost:2026/clothing")
+    fetch("http://localhost:2620/clothing")
       .then((response) => response.json())
       .then((shirts) => {
         setShirts(shirts);
@@ -63,7 +63,7 @@ const Items = () => {
   return (
     <div className="card-deck">
       <h1> This is a Items component </h1>
-      <button>Go to cart ({cart.length})</button>
+      <button>Total Items ({cart.length})</button>
       <div className="card">
             {shirts.map((shirt, index) => {
             return (

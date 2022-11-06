@@ -6,9 +6,9 @@ import db from "../db/db-connection.js";
 const router = express.Router();
 
 //GET REQUEST FOR ITEMS IN CART
-router.get("/items",  async (req, res) => {
+router.get("/",  async (req, res) => {
     try {
-      const cart = await db.query('SELECT * FROM  items_ordered ORDER BY order_id', [true]);
+      const cart = await db.query('SELECT * FROM  items_ordered ORDER BY order_id');
       res.send(cart);
     } catch (e) {
       return res.status(400).json({ e });
