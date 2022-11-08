@@ -1,7 +1,7 @@
 // src/components/nav-bar.js
 
 import React from 'react';
-import AuthNav from './auth-nav';
+import AuthNav from './auth-nav.js';
 // import TabBar from './tab-bar';
 import { Link } from "react-router-dom";
 
