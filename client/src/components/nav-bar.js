@@ -12,8 +12,6 @@ const NavBar = () => {
         <div className="container">
           <div className="navbar-brand logo" />
           <AuthNav />
-          <h6> Add Ternaray Operator</h6>
-          <span>0</span>
           {/* <TabBar /> */}
           <div className="navigation"> 
               <br></br>
@@ -22,10 +20,10 @@ const NavBar = () => {
               <br></br>
                   <Link to="/clothing"> Items</Link>
               <br></br>
-              {/* <br></br>
-                  <Link to="/about"> About</Link>
               <br></br>
+                  <Link to="/cart"> Cart</Link>
               <br></br>
+             {/* <br></br>
                   <Link to="/contact"> Contact</Link> */}
               <br></br>
           </div>
