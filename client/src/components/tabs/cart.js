@@ -13,6 +13,7 @@ const Cart = () => {
     .then((response) => response.json())
     .then((cart) => {
       setCart(cart);
+      console.log(cart);
     });
 }
   
@@ -21,7 +22,7 @@ const Cart = () => {
    if(isAuthenticated) {
     getCart(cart);
    }
-  }, [cart]);
+  }, [isAuthenticated]);
 
 
 // if user not logged in then show them auth 0
@@ -32,7 +33,7 @@ const Cart = () => {
                   {cart.map((clothes, index) => {
                   return (
                     <div>
-                      <img className="card-img-top" src={clothes.image} alt="Card image cap" />
+                      <img className="card-img-top" src={clothes.img} alt="Card image cap" />
                       <div className="card-body">
                         <h5 className="card-title">{clothes.title}</h5>
                         <p className="card-text">Price: {clothes.price}</p> 
