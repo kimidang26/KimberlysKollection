@@ -26,7 +26,7 @@ const Items = () => {
       console.log(newAdd, "Added New Items Here Kimberly");
 
       //POST where it sends item and sub/id to server
-      const response = await fetch('http://localhost:2026/clothing/additems', {
+      const response = await fetch('/clothing/additems', {
           method: 'POST',
           headers: {
               Accept: 'application/json',
@@ -43,7 +43,7 @@ const Items = () => {
 
 //get and fetch the data
   const getItems = () =>{
-    fetch("http://localhost:2026/clothing")
+    fetch("/clothing")
       .then((response) => response.json())
       .then((shirts) => {
         setShirts(shirts);

@@ -11,7 +11,7 @@ import cors from 'cors';
 import db from './db/db-connection.js';
 import dotenv from "dotenv";
 dotenv.config()
-import path from "path"
+import path from "path";
 import { fileURLToPath } from 'url';
 
 //routes
@@ -23,7 +23,7 @@ const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const REACT_BUILD_DIR = path.join(__dirname, '..', 'client', 'build');
-app.use(express.static(REACT_BUILD_DIR))
+app.use(express.static(REACT_BUILD_DIR));
 const PORT = process.env.PORT || 2026;
 
 app.use(cors());
@@ -38,7 +38,7 @@ app.use("/cart", cartRouter);
 
 // creates an endpoint for the route /api
 app.get('/', (req, res) => {
-  res.json({ message: 'Hello from My template ExpressJS' });
+  //res.json({ message: 'Hello from My template ExpressJS' });
   res.sendFile(path.join(REACT_BUILD_DIR, 'index.html'));
 });
 
