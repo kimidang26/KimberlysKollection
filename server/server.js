@@ -11,14 +11,20 @@ import cors from 'cors';
 import db from './db/db-connection.js';
 import dotenv from "dotenv";
 dotenv.config()
-
+import path from "path"
+import { fileURLToPath } from 'url';
 
 //routes
 import clothingRouter from "./routes/clothing.js";
 import cartRouter from "./routes/itemsordered.js";
 
+//set port and listen for requests
 const app = express();
-const PORT = 2026;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const REACT_BUILD_DIR = path.join(__dirname, '..', 'client', 'build');
+app.use(express.static(REACT_BUILD_DIR))
+const PORT = process.env.PORT || 2026;
 
 app.use(cors());
 app.use(express.json());
@@ -27,12 +33,13 @@ app.use(bodyParser.json());
 
 app.use("/clothing", clothingRouter);
 // app.use("/addItems", clothingRouter);
-app.use
+app.use("/cart", cartRouter);
 
 
 // creates an endpoint for the route /api
 app.get('/', (req, res) => {
   res.json({ message: 'Hello from My template ExpressJS' });
+  res.sendFile(path.join(REACT_BUILD_DIR, 'index.html'));
 });
 
 
