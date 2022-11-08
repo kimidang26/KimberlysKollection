@@ -5,7 +5,7 @@ const Cart = () => {
 
   //gets items from cart
   const getCart = () => {
-    fetch('http://localhost:2620/cart')
+    fetch('/api/cart')
     .then((response) => response.json())
     .then((cart) => {
       setCart(cart);
