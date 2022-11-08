@@ -31,9 +31,9 @@ app.use(express.json());
 app.use(bodyParser.json());
 
 
-app.use("/clothing", clothingRouter);
+app.use("/api/clothing", clothingRouter);
 // app.use("/addItems", clothingRouter);
-app.use("/cart", cartRouter);
+app.use("/api/cart", cartRouter);
 
 
 // creates an endpoint for the route /api
