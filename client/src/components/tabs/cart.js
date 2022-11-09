@@ -26,6 +26,18 @@ const Cart = () => {
   }, [isAuthenticated]);
 
 
+// **************Delete*************
+  const handleDeleteItem = async (handleDeleteShirt) => {
+    const response = await fetch(`api/cart/${handleDeleteShirt}`, {
+      method: 'DELETE',
+    })
+    await response.json();
+    const deleteItemFunction = cart.filter((clothes) => clothes.items_id.id !==handleDeleteShirt);
+    setCart(deleteItemFunction);
+    console.log("delete is here kim")
+  }
+
+
 // if user not logged in then show them auth 0
     return (
       <div className="card-deck">
@@ -38,7 +50,7 @@ const Cart = () => {
                       <div className="card-body">
                         <h5 className="card-title">{clothes.title}</h5>
                         <p className="card-text">Price: {clothes.price}</p> 
-                        {/* <button onClick={() => addToCart(shirt)}>Add to Cart</button> */}
+                        <button onClick={() => handleDeleteItem(clothes.items_id.id)}>DELETE</button>
                       </div>
                     </div>
                   );
