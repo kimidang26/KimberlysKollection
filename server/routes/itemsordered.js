@@ -28,5 +28,21 @@ router.get("/", cors(),  async (req, res) => {
   });
 
 
+  //   ******DELETE STUFF***************
+  router.delete('/:id', async (req, res) => {
+    // : acts as a placeholder
+    //to check if its correct user 
+    //SELECT created_order.user_id FROM created_order JOIN items_ordered ON items_ordered.order_id = created_order.order_id WHERE items_ordered.items_id = 5;
+    const itemOrderId = req.params.id;
+    try {
+      await db.none('DELETE FROM items_ordered WHERE items_id=$1', [itemOrderId]);
+      res.send({ status: 'success' });
+    } catch (e) {
+      return res.status(400).json({ e });
+    }
+  });
+  
+
+
 
   export default router;
