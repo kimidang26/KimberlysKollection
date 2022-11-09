@@ -18,7 +18,7 @@ router.get("/", cors(),  async (req, res) => {
       const customerId = customerInfo[0].id;
       console.log(customerId, "cutomer id kim")
 
-      const shoppingCart = await db.query('SELECT title, price, img, inventory.product_id, items_ordered.order_id, created_order.user_id , created_order.order_completed FROM inventory JOIN items_ordered ON inventory.product_id=items_ordered.product_id JOIN created_order ON items_ordered.order_id=created_order.order_id WHERE created_order.user_id=$1 AND created_order.order_completed = FALSE ', [customerId]);
+      const shoppingCart = await db.query('SELECT title, price, img, inventory.product_id, items_ordered.order_id, created_order.user_id , created_order.order_completed, items_ordered.items_id FROM inventory JOIN items_ordered ON inventory.product_id=items_ordered.product_id JOIN created_order ON items_ordered.order_id=created_order.order_id WHERE created_order.user_id=$1 AND created_order.order_completed = FALSE ', [customerId]);
       res.send(shoppingCart);
     } catch (e) {
       console.log(e.message, "kimberly here is the e");

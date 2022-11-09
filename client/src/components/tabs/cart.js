@@ -32,7 +32,7 @@ const Cart = () => {
       method: 'DELETE',
     })
     await response.json();
-    const deleteItemFunction = cart.filter((clothes) => clothes.items_id.id !==handleDeleteShirt);
+    const deleteItemFunction = cart.filter((clothes) => clothes.items_id !==handleDeleteShirt);
     setCart(deleteItemFunction);
     console.log("delete is here kim")
   }
@@ -50,7 +50,7 @@ const Cart = () => {
                       <div className="card-body">
                         <h5 className="card-title">{clothes.title}</h5>
                         <p className="card-text">Price: {clothes.price}</p> 
-                        <button onClick={() => handleDeleteItem(clothes.items_id.id)}>DELETE</button>
+                        <button onClick={() => handleDeleteItem(clothes.items_id)}>DELETE</button>
                       </div>
                     </div>
                   );
