@@ -40,7 +40,7 @@ const Cart = () => {
 
 // if user not logged in then show them auth 0
     return (
-      <div className="card-deck">
+      <div className="card-deck" >
             <h1> This is a Cart component </h1>
             <div className="card">
                   {cart.map((clothes, index) => {

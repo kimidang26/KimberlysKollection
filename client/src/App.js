@@ -9,6 +9,7 @@ import Items from "./components/tabs/clothingitems";
 import Cart from "./components/tabs/cart.js"
 import Footer from "./components/parts/footer.js"
 import Home from "./components/tabs/home.js"
+import checkout from "./components/tabs/checkout";
 
 
 function App() {
