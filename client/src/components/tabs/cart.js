@@ -40,14 +40,8 @@ const Cart = () => {
 
 
   //********Getting price data to send to parent********/
-  const addPrices = (cart) => {
-    let tempTotal = 0; 
-    for (let items of cart){
-      tempTotal+= cart[items].price;
-      setTotal(tempTotal);
-    }
-  }
-
+  let sum = cart.reduce((acc, cur) => acc + Number(cur.price),0)
+  console.log(sum);
 
 // if user not logged in then show them auth 0
     return (
@@ -67,6 +61,7 @@ const Cart = () => {
                   );
                   })}
             </div>
+            <h3>Total:${sum}</h3>
           </div>
       
     )

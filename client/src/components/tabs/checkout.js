@@ -5,12 +5,9 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 const Checkout = () => {
     const [select, setSelect] = useState(null);
-    const [total, setTotal] = useState(0);
     const {user} = useAuth0();
     
-    const finalPrice = () => {
-        setTotal()
-    }
+
 
     //POST Pt.1
     const changeOrder = async () => {
@@ -54,7 +51,7 @@ const Checkout = () => {
         displayTyMessage = (
             <div>
                 <Cart />
-                <h3>Total:  </h3>
+                {/* <h3>Total:  </h3> */}
                 <button className="purchase" onClick={changeOrder}>Purchase </button>
             </div>
         )
