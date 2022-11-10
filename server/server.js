@@ -138,20 +138,35 @@ app.post('/api/me', cors(), async (req, res) => {
 
 app.post('/completeOrder', async (req, res) => {
   const editOrder = {
-    id: req.body.id,
+    sub: req.body.sub,
   }
-  console.log([editOrder.id ]);
+  console.log([editOrder.sub ]);
+  //get user id from auth0 sub
+  const sqlId = 'SELECT id FROM users WHERE sub=$1';
+  const orderIdInfo = await db.query(sqlId, [editOrder.sub ]);
+  console.log(orderIdInfo, "Post request is 11/10 for update complete orders");
+  //STORE SUB INFO INTO USERCART_ID
+  const userCart_Id = orderIdInfo[0].id;
+
+  //QUERY TO UPDATE ORDER_COMPLETED
+  console.log(userCart_Id );
+  const changeOrderQuery = 'UPDATE created_order SET order_completed = true WHERE order_completed = false AND user_id = $1';
+
   try {
   const changeOrder = await db.query(
-    'INSERT INTO contact ( parentfirst_name, parentlast_name, cell_phone, email, student_id) VALUES($1, $2, $3, $4, $5) RETURNING *',
-    [ newContact.parentfirst_name, newContact.parentlast_name , newContact.cell_phone, newContact.email, newContact.student_id ],
+    changeOrderQuery, [userCart_Id]
   );
-  res.send(addContact);
+  // rowCount is the number of rows affected by query
+  //if any rows affect then it will return true
+  res.send({success:changeOrder.rowCount>=1});
   } catch (e) {
     console.log(e.message);
+    //400 means query isnt working
     return res.status(400).json({ e });
   }
 });
+
+
 
 // console.log that your server is up and running
 app.listen(PORT, () => {

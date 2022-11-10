@@ -25,7 +25,7 @@ const Items = () => {
       //DATA FROM USER
       console.log(newAdd, "Added New Items Here Kimberly");
 
-      //POST where it sends item and sub/id to server
+     //POST where it sends item and sub/id to server
       const response = await fetch('/api/clothing/additems', {
           method: 'POST',
           headers: {
