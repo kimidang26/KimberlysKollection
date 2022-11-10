@@ -136,6 +136,22 @@ app.post('/api/me', cors(), async (req, res) => {
 
 });
 
+app.post('/completeOrder', async (req, res) => {
+  const editOrder = {
+    id: req.body.id,
+  }
+  console.log([editOrder.id ]);
+  try {
+  const changeOrder = await db.query(
+    'INSERT INTO contact ( parentfirst_name, parentlast_name, cell_phone, email, student_id) VALUES($1, $2, $3, $4, $5) RETURNING *',
+    [ newContact.parentfirst_name, newContact.parentlast_name , newContact.cell_phone, newContact.email, newContact.student_id ],
+  );
+  res.send(addContact);
+  } catch (e) {
+    console.log(e.message);
+    return res.status(400).json({ e });
+  }
+});
 
 // console.log that your server is up and running
 app.listen(PORT, () => {

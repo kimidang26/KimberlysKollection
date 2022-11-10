@@ -9,7 +9,7 @@ import Items from "./components/tabs/clothingitems";
 import Cart from "./components/tabs/cart.js"
 import Footer from "./components/parts/footer.js"
 import Home from "./components/tabs/home.js"
-import checkout from "./components/tabs/checkout";
+import Checkout from "./components/tabs/checkout.js";
 
 
 function App() {
@@ -28,12 +28,12 @@ function App() {
 
       <NavBar />
         <div className="container flex-grow-1">
-            {!user ? <a>"Hello from Techtonica " </a>  : <span> Hello <Link to="api/me">{user.nickname}</Link> </span>}
+            {!user ? <a>"Welcome ! " </a>  : <span> Welcome Back <Link to="api/me">{user.nickname}</Link> </span>}
             <Routes>
               <Route path="/" element ={<Home />} />
               <Route path="/api/me" element ={<Profile user={user}/>} />
               <Route path="/clothing" element={<Items />} />
-              <Route path="/cart" element={<Cart />} />
+              <Route path="/cart" element={<Checkout />} />
             </Routes>
         </div>
 

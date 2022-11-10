@@ -5,6 +5,7 @@ import "./cart.css"
 const Cart = () => {
   const [cart, setCart] = useState([]);
   const {user, isAuthenticated} = useAuth0();
+  const [total, setTotal] = useState(0);
   
 
   //gets items from cart
@@ -35,6 +36,16 @@ const Cart = () => {
     const deleteItemFunction = cart.filter((clothes) => clothes.items_id !==handleDeleteShirt);
     setCart(deleteItemFunction);
     console.log("delete is here kim")
+  }
+
+
+  //********Getting price data to send to parent********/
+  const addPrices = (cart) => {
+    let tempTotal = 0; 
+    for (let items of cart){
+      tempTotal+= cart[items].price;
+      setTotal(tempTotal);
+    }
   }
 
 
