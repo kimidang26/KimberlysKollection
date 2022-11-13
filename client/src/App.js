@@ -26,7 +26,7 @@ function App() {
   return (
     <div id="app" className="d-flex flex-column h-100">
 
-      <NavBar />
+        <NavBar />
         <div className="container flex-grow-1">
             {!user ? <a>"Welcome ! " </a>  : <span> Welcome Back <Link to="api/me">{user.nickname}</Link> </span>}
             <Routes>
@@ -35,6 +35,7 @@ function App() {
               <Route path="/clothing" element={<Items />} />
               <Route path="/cart" element={<Checkout />} />
             </Routes>
+            
         </div>
 
       <Footer />
