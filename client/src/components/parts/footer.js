@@ -12,7 +12,7 @@ function Footer() {
             </div>
         </div>
         
-        <p> &copy; 2022 lifestyle.com</p>
+        <p> &copy; 2022 KIMBERLYKOLLECTIONS.COM</p>
       </div>
     );
   }

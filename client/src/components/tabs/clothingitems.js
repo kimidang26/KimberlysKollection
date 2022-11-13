@@ -62,7 +62,8 @@ const Items = () => {
 
   return (
     <div className="card-deck">
-      <h1> This is a Items component </h1>
+      <h1> Winter Season </h1>
+      <h3> Vol. 1 </h3>
       <button>Total Items ({cart.length})</button>
       <div className="card">
             {shirts.map((shirt, index) => {
