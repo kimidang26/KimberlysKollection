@@ -11,6 +11,7 @@ const Items = () => {
   console.log("cart items", cart);
   const {user} = useAuth0();
   // console.log("user id:" , user.sub);
+  const [sort, setSort] = useState([]);
 
 
   const addToCart = async (shirt) => {
@@ -42,7 +43,15 @@ const Items = () => {
 
   };
 
-  //sorting
+//   //sorting
+const handleSort = () => {
+    let sorted = shirt.rating.rate.sort((a,b) => {
+      return a.rate - b.rate;
+    });
+  
+}
+
+
 
 //get and fetch the data
   const getItems = () =>{
@@ -69,6 +78,20 @@ const Items = () => {
         <h1> Winter Season </h1>
         <h3> Vol. 1 </h3>
         <button>Total Items ({cart.length})</button>
+        <div className='filter-condition'>
+          <h4>Filters</h4>
+          <div className="form-check">
+            <label className="form-check-label">
+              <input type="radio" className='form-check-input' name="optradio"/> Ascending
+            </label>
+          </div>
+          <div className="form-check">
+            <label className="form-check-label">
+              <input type="radio" className='form-check-input' name="optradio"/> Descending
+            </label>
+          </div>
+          <button type="button" className='btn btn-outline-primary btn-sm'>Clear Filters</button>
+        </div>
 
       </div>
      
