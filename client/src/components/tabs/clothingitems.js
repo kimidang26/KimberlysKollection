@@ -11,7 +11,6 @@ const Items = () => {
   console.log("cart items", cart);
   const {user} = useAuth0();
   // console.log("user id:" , user.sub);
-  const [sort, setSort] = useState([]);
 
 
   const addToCart = async (shirt) => {
@@ -43,15 +42,28 @@ const Items = () => {
 
   };
 
-//   //sorting
-const handleSort = () => {
-    let sorted = shirt.rating.rate.sort((a,b) => {
-      return a.rate - b.rate;
+  //sorting
+  //sortstate is updated based on onclick on radio buttons
+//handlesort use sort state to determine whether asc or desc
+const handleSort = (evt) => {
+  //need ... because we updated the state value . So we created a new array using ... and sorting and gives new array which replaces setshirt triggering a new rerender
+  //without ... were modifying state value bypassing react, it does not rerender
+    let sorted = [...shirts].sort((a,b) => {
+      console.log(a.price);
+      if (evt.currentTarget.value === 'asc'){
+        return a.price - b.price;
+      } else if(evt.currentTarget.value === 'desc'){
+        return b.price - a.price;
+      } else if (evt.currentTarget.value === 'clear'){
+        return a.id - b.id;
+      }
+      
     });
+    setShirts(sorted);
+    console.log(handleSort);
+    console.log(evt.currentTarget.value);
   
 }
-
-
 
 //get and fetch the data
   const getItems = () =>{
@@ -82,15 +94,15 @@ const handleSort = () => {
           <h4>Filters</h4>
           <div className="form-check">
             <label className="form-check-label">
-              <input type="radio" className='form-check-input' name="optradio"/> Ascending
+              <input type="radio" className='form-check-input' value='asc' name = 'price_sort' onChange={handleSort}/> Ascending Low-High
             </label>
           </div>
           <div className="form-check">
             <label className="form-check-label">
-              <input type="radio" className='form-check-input' name="optradio"/> Descending
+              <input type="radio" className='form-check-input' value='desc' name = 'price_sort'  onChange={handleSort} /> Descending High-Low
             </label>
           </div>
-          <button type="button" className='btn btn-outline-primary btn-sm'>Clear Filters</button>
+          <button type="button" className='btn btn-outline-primary btn-sm' value='clear' name = 'price_sort' onClick={handleSort}>Clear Filters</button>
         </div>
 
       </div>
@@ -101,7 +113,7 @@ const handleSort = () => {
 
 
 
-                <div className="card-group">
+                <div className="card-group" key ={shirt.id}>
                   <div className="card">
                     <img className="card-img-top" src={shirt.image} alt="Card image cap" />
                     <div className="card-body">

@@ -63,7 +63,7 @@ const Cart = () => {
                   );
                   })}
             </div>
-            <h3>Total:${sum}</h3>
+            <h3>Total:${sum.toFixed(2)}</h3>
           </div>
       
     )
