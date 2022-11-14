@@ -12,6 +12,7 @@ const Items = () => {
   const {user} = useAuth0();
   // console.log("user id:" , user.sub);
 
+
   const addToCart = async (shirt) => {
     console.log('we are in cart')
     console.log(user.sub)
@@ -41,6 +42,8 @@ const Items = () => {
 
   };
 
+  //sorting
+
 //get and fetch the data
   const getItems = () =>{
     fetch("/api/clothing")
@@ -66,6 +69,7 @@ const Items = () => {
         <h1> Winter Season </h1>
         <h3> Vol. 1 </h3>
         <button>Total Items ({cart.length})</button>
+
       </div>
      
         <div className="card-display">
