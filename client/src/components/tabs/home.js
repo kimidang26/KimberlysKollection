@@ -13,15 +13,15 @@ const home = () => {
   <Carousel>
     <div>
         <img src={tiffany} alt="tiffany"  />
-        <p className="legend">Legend 1</p>
+        <p className="legend">Tiffany</p>
     </div>
     <div>
         <img src={lily} alt="lily" />
-        <p className="legend">Legend 2</p>
+        <p className="legend">Jordan and Lily</p>
     </div>
     <div>
         <img src={frenemies} alt="frenimies" />
-        <p className="legend">Legend 3</p>
+        <p className="legend">frenemies</p>
     </div>
 </Carousel>
 

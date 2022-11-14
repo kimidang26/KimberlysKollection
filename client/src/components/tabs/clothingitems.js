@@ -12,6 +12,7 @@ const Items = () => {
   const {user} = useAuth0();
   // console.log("user id:" , user.sub);
 
+
   const addToCart = async (shirt) => {
     console.log('we are in cart')
     console.log(user.sub)
@@ -41,6 +42,8 @@ const Items = () => {
 
   };
 
+  //sorting
+
 //get and fetch the data
   const getItems = () =>{
     fetch("/api/clothing")
@@ -62,23 +65,38 @@ const Items = () => {
 
   return (
     <div className="card-deck">
-      <h1> This is a Items component </h1>
-      <button>Total Items ({cart.length})</button>
-      <div className="card">
-            {shirts.map((shirt, index) => {
-            return (
-              <div>
-                <img className="card-img-top" src={shirt.image} alt="Card image cap" />
-                 <div className="card-body">
-                  <h5 className="card-title">{shirt.title}</h5>
-                  <p className="card-text">Rating: {shirt.rating.rate}</p>
-                  <p className="card-text">Price: {shirt.price}</p> 
-                  <button onClick={() => addToCart(shirt)}>Add to Cart</button>
-                </div>
-              </div>
-            );
-            })}
+      <div className='card-header'>
+        <h1> Winter Season </h1>
+        <h3> Vol. 1 </h3>
+        <button>Total Items ({cart.length})</button>
+
       </div>
+     
+        <div className="card-display">
+              {shirts.map((shirt, index) => {
+              return (
+
+
+
+                <div className="card-group">
+                  <div className="card">
+                    <img className="card-img-top" src={shirt.image} alt="Card image cap" />
+                    <div className="card-body">
+                      <h5 className="card-title">{shirt.title}</h5>
+                      <p className="card-text">Rating: {shirt.rating.rate}</p>
+                      <p className="card-text">Price: {shirt.price}</p> 
+                      <button onClick={() => addToCart(shirt)}>Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+              );
+              })}
+
+        </div>
     </div>
 
   )

@@ -47,15 +47,17 @@ const Cart = () => {
     return (
       <div className="card-deck" >
             <h1> This is a Cart component </h1>
-            <div className="card">
+            <div className="card-display">
                   {cart.map((clothes, index) => {
                   return (
-                    <div>
+                    <div className="card-group">
+                      <div className="card">
                       <img className="card-img-top" src={clothes.img} alt="Card image cap" />
                       <div className="card-body">
                         <h5 className="card-title">{clothes.title}</h5>
                         <p className="card-text">Price: {clothes.price}</p> 
                         <button onClick={() => handleDeleteItem(clothes.items_id)}>DELETE</button>
+                      </div>
                       </div>
                     </div>
                   );
