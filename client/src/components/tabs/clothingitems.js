@@ -60,7 +60,7 @@ const handleSort = (evt) => {
       
     });
     setShirts(sorted);
-    console.log(handleSort);
+    console.log(handleSort, "line 63");
     console.log(evt.currentTarget.value);
   
 }
@@ -91,8 +91,14 @@ const handleSort = (evt) => {
         <h3> Vol. 1 </h3>
         <button>Total Items ({cart.length})</button>
         <div className='filter-condition'>
-          <h4>Filters</h4>
-          <div className="form-check">
+          <h4>Sort By : </h4>
+          
+          <select onChange={handleSort}>
+            <option value='clear' name= 'price_sort' >Default</option>
+            <option value='asc' name='price_sort' >Ascending</option>
+            <option value='desc' name='price_sort' >Descending</option>
+          </select>
+          {/* <div className="form-check">
             <label className="form-check-label">
               <input type="radio" className='form-check-input' value='asc' name = 'price_sort' onChange={handleSort}/> Ascending Low-High
             </label>
@@ -102,7 +108,7 @@ const handleSort = (evt) => {
               <input type="radio" className='form-check-input' value='desc' name = 'price_sort'  onChange={handleSort} /> Descending High-Low
             </label>
           </div>
-          <button type="button" className='btn btn-outline-primary btn-sm' value='clear' name = 'price_sort' onClick={handleSort}>Clear Filters</button>
+          <button type="button" className='btn btn-outline-primary btn-sm' value='clear' name = 'price_sort' onClick={handleSort}>Clear Filters</button> */}
         </div>
 
       </div>
@@ -110,9 +116,6 @@ const handleSort = (evt) => {
         <div className="card-display">
               {shirts.map((shirt, index) => {
               return (
-
-
-
                 <div className="card-group" key ={shirt.id}>
                   <div className="card">
                     <img className="card-img-top" src={shirt.image} alt="Card image cap" />
@@ -124,10 +127,6 @@ const handleSort = (evt) => {
                     </div>
                   </div>
                 </div>
-
-
-
-
               );
               })}
 
