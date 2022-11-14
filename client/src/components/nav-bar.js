@@ -6,6 +6,7 @@ import AuthNav from './auth-nav.js';
 import { NavLink, Link } from "react-router-dom";
 import "./nav-bar.css";
 import Logo from "../images/Logo.png";
+import VIDEO from "../images/VIDEO#2.mp4"
 
 const NavBar = () => {
   return (
