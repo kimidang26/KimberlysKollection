@@ -54,6 +54,8 @@ const handleSort = (evt) => {
         return a.price - b.price;
       } else if(evt.currentTarget.value === 'desc'){
         return b.price - a.price;
+      } else if(evt.currentTarget.value === 'rate'){
+        return b.rating.rate - a.rating.rate;
       } else if (evt.currentTarget.value === 'clear'){
         return a.id - b.id;
       }
@@ -95,8 +97,9 @@ const handleSort = (evt) => {
           
           <select onChange={handleSort}>
             <option value='clear' name= 'price_sort' >Default</option>
-            <option value='asc' name='price_sort' >Ascending</option>
-            <option value='desc' name='price_sort' >Descending</option>
+            <option value='asc' name='price_sort' >Price: Low to High</option>
+            <option value='desc' name='price_sort' >Price: High to Low</option>
+            <option value='rate' name='price_sort' >Customer Review</option>
           </select>
           {/* <div className="form-check">
             <label className="form-check-label">
