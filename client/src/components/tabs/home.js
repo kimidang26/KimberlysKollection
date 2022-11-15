@@ -13,7 +13,7 @@ const home = () => {
   return (
 
     <div className="hello">
-      <iframe width="800" height="1000" src="https://www.youtube.com/embed/YKaiXY7zHxk?controls=0&amp;start=16" title="YouTube video player" frameborder="10" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="1500" height="1000" src="https://www.youtube.com/embed/YKaiXY7zHxk?controls=0&amp;start=16" title="YouTube video player" frameborder="10" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       {/* <NavBar /> */}
     </div>
 
