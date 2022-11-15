@@ -12,30 +12,27 @@ import NavBar from "../nav-bar.js";
 const home = () => {
   return (
 
-    // <div className="hello">
-    //   <video src={ClothingStore} autoPlay loop muted />
-    //   <div className='content'>
-    //     <h2>Kimberly Kollection</h2>
-    //   </div>
-    //   <NavBar />
-    // </div>
+    <div className="hello">
+      <iframe width="800" height="1000" src="https://www.youtube.com/embed/YKaiXY7zHxk?controls=0&amp;start=16" title="YouTube video player" frameborder="10" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      {/* <NavBar /> */}
+    </div>
 
 
-      <Carousel>
-        <div>
-            <img src={tiffany} alt="tiffany"  />
-            <p className="legend">Tiffany</p>
-        </div>
-        <div>
-            <img src={lily} alt="lily" />
-            <p className="legend">Jordan and Lily</p>
-        </div>
-        <div>
-            <img src={frenemies} alt="frenimies" />
-            <p className="legend">frenemies</p>
-        </div>
-    </Carousel>
-  )
+    //   <Carousel>
+    //     <div>
+    //         <img src={tiffany} alt="tiffany"  />
+    //         <p className="legend">Tiffany</p>
+    //     </div>
+    //     <div>
+    //         <img src={lily} alt="lily" />
+    //         <p className="legend">Jordan and Lily</p>
+    //     </div>
+    //     <div>
+    //         <img src={frenemies} alt="frenimies" />
+    //         <p className="legend">frenemies</p>
+    //     </div>
+    // </Carousel>
+   )
 }
 
 export default home
