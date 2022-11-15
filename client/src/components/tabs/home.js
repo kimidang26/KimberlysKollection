@@ -10,23 +10,29 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const home = () => {
   return ( 
-  <Carousel>
-    <div>
-        <img src={tiffany} alt="tiffany"  />
-        <p className="legend">Tiffany</p>
+
+    <div className="hello">
+      Hello world
     </div>
-    <div>
-        <img src={lily} alt="lily" />
-        <p className="legend">Jordan and Lily</p>
-    </div>
-    <div>
-        <img src={frenemies} alt="frenimies" />
-        <p className="legend">frenemies</p>
-    </div>
-</Carousel>
 
 
-    
+
+
+
+//   <Carousel>
+//     <div>
+//         <img src={tiffany} alt="tiffany"  />
+//         <p className="legend">Tiffany</p>
+//     </div>
+//     <div>
+//         <img src={lily} alt="lily" />
+//         <p className="legend">Jordan and Lily</p>
+//     </div>
+//     <div>
+//         <img src={frenemies} alt="frenimies" />
+//         <p className="legend">frenemies</p>
+//     </div>
+// </Carousel>
   )
 }
 

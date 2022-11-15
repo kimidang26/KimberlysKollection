@@ -27,9 +27,7 @@ function App() {
     <div id="app" className="d-flex flex-column h-100">
 
         <NavBar />
-        {/* <div>
-          {!user ? "": }
-        </div> */}
+        <br></br>
         <div className="container flex-grow-1">
             {!user ? <a>"Welcome ! " </a>  : <span> Welcome Back <Link to="api/me">{user.nickname}</Link> </span>}
             <Routes>

@@ -101,17 +101,6 @@ const handleSort = (evt) => {
             <option value='desc' name='price_sort' >Price: High to Low</option>
             <option value='rate' name='price_sort' >Customer Review</option>
           </select>
-          {/* <div className="form-check">
-            <label className="form-check-label">
-              <input type="radio" className='form-check-input' value='asc' name = 'price_sort' onChange={handleSort}/> Ascending Low-High
-            </label>
-          </div>
-          <div className="form-check">
-            <label className="form-check-label">
-              <input type="radio" className='form-check-input' value='desc' name = 'price_sort'  onChange={handleSort} /> Descending High-Low
-            </label>
-          </div>
-          <button type="button" className='btn btn-outline-primary btn-sm' value='clear' name = 'price_sort' onClick={handleSort}>Clear Filters</button> */}
         </div>
 
       </div>
