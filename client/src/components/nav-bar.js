@@ -11,13 +11,6 @@ import ClothingStore from "../images/ClothingStore.mp4"
 const NavBar = () => {
   return (
     <div className='main'>
-      <video src={ClothingStore} autoPlay loop muted/>
-        <div className='content'>
-          <h2>Kimberly Kollection</h2>
-        </div>
-      {/* <video autoPlay loop muted playsInline className="backvideo">
-        <source src={VIDEO} type="video/mp4"/>
-      </video> */}
       <nav>
         <img src={Logo} alt="Kimberly-Kollection-Logo" className="logo"  />
         <ul>
