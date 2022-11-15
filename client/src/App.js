@@ -10,6 +10,7 @@ import Cart from "./components/tabs/cart.js"
 import Footer from "./components/parts/footer.js"
 import Home from "./components/tabs/home.js"
 import Checkout from "./components/tabs/checkout.js";
+import AuthNav from "./components/auth-nav.js";
 
 
 function App() {
@@ -25,7 +26,6 @@ function App() {
 
   return (
     <div id="app" className="d-flex flex-column h-100">
-
         <NavBar />
         <br></br>
         <div className="container flex-grow-1">

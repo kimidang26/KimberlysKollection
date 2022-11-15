@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./clothingitem.css";
 import { useAuth0 } from "@auth0/auth0-react";
+import AuthenticationButton from "../authentication-button.js"
  
 
 
@@ -9,7 +10,9 @@ const Items = () => {
   const [shirts, setShirts] = useState([]); 
   const [cart, setCart] = useState([]);
   console.log("cart items", cart);
-  const {user} = useAuth0();
+  // const {user} = useAuth0();
+  const { isAuthenticated, user } = useAuth0();
+  const { loginWithRedirect } = useAuth0();
   // console.log("user id:" , user.sub);
 
 
@@ -81,8 +84,8 @@ const handleSort = (evt) => {
     }, []);
 
 
-    if(!shirts){
-      return <div>Loading...</div>
+    if(!user){
+      return loginWithRedirect()
   } else { 
 
 

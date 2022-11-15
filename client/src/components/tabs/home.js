@@ -12,32 +12,29 @@ import NavBar from "../nav-bar.js";
 const home = () => {
   return (
 
-    <div className="hello">
-      <video src={ClothingStore} autoPlay loop muted />
-      <div className='content'>
-        <h2>Kimberly Kollection</h2>
-      </div>
-      <NavBar />
-    </div>
+    // <div className="hello">
+    //   <video src={ClothingStore} autoPlay loop muted />
+    //   <div className='content'>
+    //     <h2>Kimberly Kollection</h2>
+    //   </div>
+    //   <NavBar />
+    // </div>
 
 
-
-
-
-    //   <Carousel>
-    //     <div>
-    //         <img src={tiffany} alt="tiffany"  />
-    //         <p className="legend">Tiffany</p>
-    //     </div>
-    //     <div>
-    //         <img src={lily} alt="lily" />
-    //         <p className="legend">Jordan and Lily</p>
-    //     </div>
-    //     <div>
-    //         <img src={frenemies} alt="frenimies" />
-    //         <p className="legend">frenemies</p>
-    //     </div>
-    // </Carousel>
+      <Carousel>
+        <div>
+            <img src={tiffany} alt="tiffany"  />
+            <p className="legend">Tiffany</p>
+        </div>
+        <div>
+            <img src={lily} alt="lily" />
+            <p className="legend">Jordan and Lily</p>
+        </div>
+        <div>
+            <img src={frenemies} alt="frenimies" />
+            <p className="legend">frenemies</p>
+        </div>
+    </Carousel>
   )
 }
 
