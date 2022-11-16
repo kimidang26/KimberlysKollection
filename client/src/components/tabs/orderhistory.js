@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useAuth0 } from "@auth0/auth0-react";
 
 
+
 const History = () => {
   const [history, setHistory] = useState([]);
   const {user, isAuthenticated} = useAuth0();
@@ -46,7 +47,7 @@ useEffect(() => {
             return (
               <tr key = {index}>
                 <td>{his.created_on.slice(0,10)}</td>
-                <td> <img className="card-img-top" src={his.image} alt="" /></td>
+                <td> <img src={his.img} alt="" width="100px" /></td>
                 <td>{his.title}</td>
                 <td>{his.order_id}</td>
               </tr>
