@@ -11,6 +11,7 @@ import Footer from "./components/parts/footer.js"
 import Home from "./components/tabs/home.js"
 import Checkout from "./components/tabs/checkout.js";
 import AuthNav from "./components/auth-nav.js";
+import History from "./components/tabs/orderhistory";
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
               <Route path="/api/me" element ={<Profile user={user}/>} />
               <Route path="/clothing" element={<Items />} />
               <Route path="/cart" element={<Checkout />} />
+              <Route path="/history" element={<History />} />
             </Routes>
             
         </div>

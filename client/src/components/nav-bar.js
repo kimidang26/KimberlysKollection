@@ -43,6 +43,9 @@ const NavBar = ({displayVideo}) => {
                       <NavLink to="/cart"> Checkout</NavLink>
                   </li> 
                   <li>
+                      <NavLink to="/history"> Order History</NavLink>
+                  </li> 
+                  <li>
                     <AuthNav />
                   </li>
                 </ul> 

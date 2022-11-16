@@ -1,31 +1,104 @@
-# Kimberly's Clothing Store
-Create full stack apps with React and Express. Run your client, server and do a restart of your dump db to have a full-stack project working in minutes
+# Kimberly's Kollection Store
 
-# Step by Step instructions - To use this project as your start point
-You can follow this instructions and code along with the video - [setup instructions working](https://www.dropbox.com/s/tthmdat3n3vp3be/SettingUpTemplate.mov?dl=0)
+<p align="center">
+ <img src="./client/src/images/KK_Logo.png" width="200">
+ </p>
 
-### For create the whole project
-1. Go to your source directory in your terminal and run the command `git clone https://github.com/Yosolita1978/React-Express-PairProgramming.git NAMENEWDIRECTORY`
-![You will something like this in your terminal.](https://github.com/Yosolita1978/screenshoots/blob/main/template/Screen%20Shot%202022-03-20%20at%207.50.46%20PM.png?raw=true)
+## Kollection Store - Overview
+An application where consumers can purchase clothing items for school, they can sort products and see the history of past orders.  
 
-2. To clean your folder from the owner git, run the command `rm -rf .git` ( - You don't want to work with the git of the owner of this Template)
-3. Run the command `git init` to start your git repository 
-![You will something like this in your terminal.](https://github.com/Yosolita1978/screenshoots/blob/main/template/Screen%20Shot%202022-10-30%20at%207.21.22%20PM.png?raw=true)
 
-##### TO INSTALL, SET UP AND WORK IN THE SERVER SIDE
-4. Go to the server folder in the project (`cd server`) and run the command `npm install`
-5. Inside your server folder, create an .env file with `touch .env`
-6. Inside your server folder, open the file `.env.example` and copy the file there. 
-7. Inside your .env file, paste the string from .env.example and change the variables with the values from the project. For this template, the name of your db is `techtonica1`.
-![Your .env file should look like this.](https://github.com/Yosolita1978/screenshoots/blob/main/template/Screen%20Shot%202022-10-30%20at%207.24.50%20PM.png?raw=true)
+### Techstack
+* HTML
+* CSS	
+* JavaScript	
+* postgreSQL	
+* Express
+* React	
+* Node	
+* Bootstrap	
 
-8.  BACK TO THE TERMINAL - To restore the DB dump file that the project already contain, just run the command `psql -U postgres -f db.sql`. Make sure that you have your Postgres password on hand. The psql console will ask you for your password.  If you had configured your postgres without password just run the command `psql -f db.sql`
-9.  At this point you can run the command `npm start` to run your server and it should look like this. 
-![You will something like this in your terminal.](https://github.com/Yosolita1978/screenshoots/blob/main/template/Screen%20Shot%202022-10-30%20at%207.28.12%20PM.png?raw=true)
 
-##### NOW, BACK TO THE TERMINAL TO WORK IN YOUR FRONTEND
 
-10. Go to the cliente folder (`cd .. and cd client`) and run the command `npm install`
-11. Both server should run now with `npm start`
-12. Go to localhost:3000 and you should see something like this
-![You will something like this in your terminal.](https://github.com/Yosolita1978/screenshoots/blob/main/template/Screen%20Shot%202022-10-30%20at%207.30.21%20PM.png?raw=true)
+
+### APIs
+* Auth0
+* Free Store API
+
+
+### Drawing Board
+
+#### Style Guide
+
+#### Wireframe
+
+#### Data Model
+
+#### User Flow
+
+
+<br/>
+
+## Installation
+<br/>
+
+### Prereq:
+
+
+1. Node: You'll need to install Node v14 or above. nvm is highly recommended.
+
+<br/>
+
+### Installation
+
+1. Clone the repo: 
+```
+git clone https://github.com/kimidang26/StoreProject_FinalProject.git
+```
+
+2. Install all NPM packages using this in the root directory:
+    ```
+    npm install
+    ```
+3. Database setup:
+    - Copy the root example environment file
+        ```
+         cp .env.example .env
+         ```
+      
+    - You can choose to edit .env or just use as-is.
+    - Run the following to setup the database with the seed file:
+         ```
+        npm run db:init
+         ```
+4. Start the app and view it at http://localhost:4000 by using:    
+    ```
+    npm start
+    ```
+
+
+### Set Up React client for auth0
+If you want to try it with Auth0, the frontend needs to be setup with the following:
+
+1. Copy the app's example environment file
+    ```
+    cp app/.env.example app/.env
+    ```
+    - The .env file allows the React app to use Auth0, and requires an Auth0 domain + client-id.
+
+2. The .env file allows the React app to use Auth0, and requires an Auth0 domain + client-id.
+    - These can be obtained by signing up for an Auth0 account and Registering a Single-Page Web Application in order to get these values
+    - This graphic from Auth0's guide may be helpful to locating them
+
+## Testing
+
+To run tests on the terminal:
+* On client side run the following command:
+    ```
+    npm test
+    ```
+
+## Future Development
+- Allow users to add to cart without logging in until submitting cart
+- Using a payment functionality
+- Adding more clothing items
