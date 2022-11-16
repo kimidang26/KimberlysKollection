@@ -19,7 +19,7 @@ function App() {
 
   const { isLoading } = useAuth0();
   const {user} = useAuth0();
-  console.log(user);
+  console.log({user});
   const location = useLocation();
   const isHomePage = location.pathname === '/';
  
