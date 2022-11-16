@@ -18,9 +18,10 @@ const NavBar = ({displayVideo}) => {
 
     //only do header with video when display video is true
     //need another ternary statement
-    //hi melissa!!!!!
     <div className={displayVideo? `header header--with-video` : `header`}>
       <div className="nav-container mb-3">
+    {/* only do navbar with video when display video is true
+    need another ternary statement */}
         <nav className={displayVideo? `navbar navbar-expand-md navbar--with-video` : `navbar navbar-expand-md`}>
           <div className="brand-logo">
             <img src={Logo} alt="Kimberly-Kollection-Logo" />
