@@ -5,7 +5,7 @@ import AuthNav from './auth-nav.js'
 // import TabBar from './tab-bar';
 import { NavLink, Link } from "react-router-dom";
 import "./nav-bar.css";
-import Logo from "../images/Logo.png";
+import Logo from "../images/KK_Logo.png";
 import ClothingStore from "../images/ClothingStore.mp4";
 import { useAuth0 } from '@auth0/auth0-react';
 
@@ -60,11 +60,11 @@ const NavBar = ({displayVideo}) => {
         height="1000"
         src="https://www.youtube.com/embed/YKaiXY7zHxk?controls=0&autoplay=1&mute=1&rel=0&loop=1"
         title="YouTube video player"
-        loop = "true"
-        autoplay = "true"
-        frameborder="10"
+        loop = {true}
+        autoPlay = {true}
+        frameBorder="10"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
+        allowFullScreen = {true}
         style={{
           position: 'absolute',
           top: '50%',
