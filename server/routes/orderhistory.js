@@ -9,7 +9,7 @@ router.get("/", cors(),  async (req, res) => {
     const userHistory = {
       sub: req.query.sub,
     }
-    console.log([userCart.sub])
+    console.log([userHistory.sub])
       try {
         const historyIdSql= 'SELECT id FROM users WHERE sub= $1';
         const his_customerInfo = await db.query(historyIdSql, [userHistory.sub])

@@ -9,6 +9,11 @@ const History = () => {
   //gets items from history
   const getHistory = () => {
     //gets dont have a body so we have to pass it as query parameters which is $=
+    const newAdd = {
+      sub: user.sub,
+    }
+
+
     fetch(`/api/history?sub=${user.sub}`)
     .then((response) => response.json())
     .then((history) => {
@@ -40,8 +45,8 @@ useEffect(() => {
           {history.map((his, index) => {
             return (
               <tr key = {index}>
-                 <td>{his.created_on}</td>
-                <td>{his.img}</td>
+                <td>{his.created_on}</td>
+                <td> <img className="card-img-top" src={his.image} alt="" /></td>
                 <td>{his.title}</td>
                 <td>{his.order_id}</td>
               </tr>

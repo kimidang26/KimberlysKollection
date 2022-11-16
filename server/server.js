@@ -17,7 +17,7 @@ import { fileURLToPath } from 'url';
 //routes
 import clothingRouter from "./routes/clothing.js";
 import cartRouter from "./routes/itemsordered.js";
-import historyRouter from "./routes/orderhistory";
+import historyRouter from "./routes/orderhistory.js";
 
 //set port and listen for requests
 const app = express();
