@@ -10,40 +10,32 @@ import ClothingStore from "../images/ClothingStore.mp4";
 import { useAuth0 } from '@auth0/auth0-react';
 
 
-const NavBar = () => {
+const NavBar = ({displayVideo}) => {
 
   return (
-    // <div className='main'>
-    //   <nav>
-    //     <img src={""} alt="" className="logo"  />
-    //     <ul>
-    //       <li><NavLink to="/">Home Page</NavLink></li>
-    //       <li><NavLink to="/clothing">Clothes</NavLink></li>
-    //       <li><NavLink to="/cart">Cart</NavLink></li>
-    //       <li><AuthNav /></li>
-    //     </ul>
-    //   </nav>
-    // </div>
 
+    //only do header with video when display video is true
+    //need another ternary statement
+    <div className={`header header--with-video`}>
+      <div className="nav-container mb-3">
+    {/* only do navbar with video when display video is true
+    need another ternary statement */}
+        <nav className="navbar navbar-expand-md navbar--with-video">
+          <div className="brand-logo">
+            <img src={Logo} alt="Kimberly-Kollection-Logo" />
+          </div>
+          <div className="container">
+            <div className="auth0-button" />
+            <br></br>
+            <div className="nav-links">
+              <ul>
+                <li>
+                  <NavLink to="/"> Home Page</NavLink>
+                </li>
 
-    <div className ="header">
-        <div className="nav-container mb-3">
-          <nav className="navbar navbar-expand-md">
-              <div className ="brand-logo">
-                <img src={Logo} alt="Kimberly-Kollection-Logo"  />
-              </div>
-            <div className="container">
-              <div className="auth0-button" />
-              <br></br>
-              <div className="nav-links"> 
-                <ul>
-                  <li>
-                      <NavLink to="/"> Home Page</NavLink>
-                  </li>
-
-                  <li>
-                      <NavLink to="/clothing"> Clothes</NavLink>
-                  </li>
+                <li>
+                  <NavLink to="/clothing"> Clothes</NavLink>
+                </li>
                       
                   <li>
                       <NavLink to="/cart"> Checkout</NavLink>
@@ -53,10 +45,29 @@ const NavBar = () => {
                   </li>
                 </ul> 
 
-              </div>
             </div>
-          </nav>
-        </div>
+          </div>
+        </nav>
+      </div>
+ {/* // only display if displayvideo is true, create ternary */}
+      <iframe
+        width="1500"
+        height="1000"
+        src="https://www.youtube.com/embed/YKaiXY7zHxk?controls=0&autoplay=1&mute=1&rel=0&loop=1"
+        title="YouTube video player"
+        loop = "true"
+        autoplay = "true"
+        frameborder="10"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          zIndex: -5,
+        }}
+      ></iframe>
     </div>
   );
 };

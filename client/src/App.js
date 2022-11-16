@@ -3,7 +3,7 @@ import NavBar from "./components/nav-bar";
 // import Students from "./components/students";
 import {useAuth0} from "@auth0/auth0-react";
 import Loading from "./components/loading";
-import {Route, Routes, Router, Link} from 'react-router-dom';
+import {Route, Routes, Router, Link, useRoutes} from 'react-router-dom';
 import Profile from "./components/profile";
 import Items from "./components/tabs/clothingitems";
 import Cart from "./components/tabs/cart.js"
@@ -19,6 +19,9 @@ function App() {
   const { isLoading } = useAuth0();
   const {user} = useAuth0();
   console.log(user);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+  //google route to homepage
  
   if (isLoading) {
     return <Loading />;
@@ -26,7 +29,7 @@ function App() {
 
   return (
     <div id="app" className="d-flex flex-column h-100">
-        <NavBar />
+        <NavBar displayVideo = {isHomePage} />
         <br></br>
         <div className="container flex-grow-1">
             {!user ? <a>"Welcome ! " </a>  : <span> Welcome Back <Link to="api/me">{user.nickname}</Link> </span>}

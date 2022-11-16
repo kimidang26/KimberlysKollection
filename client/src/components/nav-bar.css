@@ -1,3 +1,22 @@
+.header--with-video{
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-container{
+  z-index: 10;
+}
+
+.navbar.navbar-expand-md{
+  background-color: #f4e9e0;
+}
+
+.navbar.navbar-expand-md{
+  background-color: transparent;
+}
+
+
 .brand-logo img{
     height: 200px;
     width: 200px;
@@ -31,9 +50,7 @@ nav a:hover {
     color: black;
   } 
 
-.navbar.navbar-expand-md{
-    background-color: #f4e9e0;
-}
+
 
 
  .hero{
