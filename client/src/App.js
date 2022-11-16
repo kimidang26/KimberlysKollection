@@ -3,7 +3,7 @@ import NavBar from "./components/nav-bar";
 // import Students from "./components/students";
 import {useAuth0} from "@auth0/auth0-react";
 import Loading from "./components/loading";
-import {Route, Routes, Router, Link, useRoutes} from 'react-router-dom';
+import {Route, Routes, Router, Link, useRoutes, useLocation} from 'react-router-dom';
 import Profile from "./components/profile";
 import Items from "./components/tabs/clothingitems";
 import Cart from "./components/tabs/cart.js"
@@ -21,7 +21,6 @@ function App() {
   console.log(user);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
-  //google route to homepage
  
   if (isLoading) {
     return <Loading />;

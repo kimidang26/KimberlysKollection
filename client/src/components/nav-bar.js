@@ -12,15 +12,17 @@ import { useAuth0 } from '@auth0/auth0-react';
 
 const NavBar = ({displayVideo}) => {
 
+
+
   return (
 
     //only do header with video when display video is true
     //need another ternary statement
-    <div className={`header header--with-video`}>
+    <div className={displayVideo? `header header--with-video` : `header`}>
       <div className="nav-container mb-3">
     {/* only do navbar with video when display video is true
     need another ternary statement */}
-        <nav className="navbar navbar-expand-md navbar--with-video">
+        <nav className={displayVideo? `navbar navbar-expand-md navbar--with-video` : `navbar navbar-expand-md`}>
           <div className="brand-logo">
             <img src={Logo} alt="Kimberly-Kollection-Logo" />
           </div>
@@ -50,7 +52,7 @@ const NavBar = ({displayVideo}) => {
         </nav>
       </div>
  {/* // only display if displayvideo is true, create ternary */}
-      <iframe
+  {displayVideo ? (<iframe
         width="1500"
         height="1000"
         src="https://www.youtube.com/embed/YKaiXY7zHxk?controls=0&autoplay=1&mute=1&rel=0&loop=1"
@@ -67,7 +69,8 @@ const NavBar = ({displayVideo}) => {
           transform: 'translate(-50%, -50%)',
           zIndex: -5,
         }}
-      ></iframe>
+      ></iframe>) : null}
+      
     </div>
   );
 };
