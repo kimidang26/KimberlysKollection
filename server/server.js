@@ -17,6 +17,7 @@ import { fileURLToPath } from 'url';
 //routes
 import clothingRouter from "./routes/clothing.js";
 import cartRouter from "./routes/itemsordered.js";
+import historyRouter from "./routes/orderhistory";
 
 //set port and listen for requests
 const app = express();
@@ -34,6 +35,7 @@ app.use(bodyParser.json());
 app.use("/api/clothing", clothingRouter);
 // app.use("/addItems", clothingRouter);
 app.use("/api/cart", cartRouter);
+app.use("/api/history", historyRouter);
 
 
 // creates an endpoint for the route /api
