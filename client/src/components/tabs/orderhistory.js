@@ -47,7 +47,7 @@ useEffect(() => {
             return (
               <tr key = {index}>
                 <td>{his.created_on.slice(0,10)}</td>
-                <td> <img src={his.img} alt="" width="100px" /></td>
+                <td> <img src={his.img} alt="Shirt" width="100px" /></td>
                 <td>{his.title}</td>
                 <td>{his.order_id}</td>
               </tr>
