@@ -1,8 +1,11 @@
 services:
-  - type: web
-    name: api
-    env: docker
+  - name: server
     plan: free
+    type: web
+    env: node
+    repo: https://github.com/kimidang26/StoreProject_FinalProject
+    buildCommand: cd client && npm install && npm run build && cd ../server && npm install
+    startCommand: cd server && node ./node_modules/db-migrate/bin/db-migrate up && node server.js
     envVars:
       - fromGroup: finalproject
       - key: DATABASE_URL
