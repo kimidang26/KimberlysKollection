@@ -1,9 +1,11 @@
 import express from "express";
 import cors from 'cors';
 import db from "../db/db-connection.js";
+import fetch from 'node-fetch';
 // import { restart } from "nodemon";
 // import db from "../db/db-connection.js";
 const router = express.Router();
+
 
 
 // GET REQUEST FOR CLOTHING
