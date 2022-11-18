@@ -1,18 +1,15 @@
 services:
-  - name: server
+  - type: web
+    name: api
+    env: docker
     plan: free
-    type: web
-    env: node
-    repo: https://github.com/kimidang26/StoreProject_FinalProject
-    buildCommand: cd client && npm install && npm run build && cd ../server && npm install
-    startCommand: cd server && node ./node_modules/db-migrate/bin/db-migrate up && node server.js
     envVars:
+      - fromGroup: finalproject
       - key: DATABASE_URL
         fromDatabase:
-          name: db
+          name: clothingstore
           property: connectionString
 
 databases:
-  - name: db
+  - name: clothingstore
     plan: free
-    ipAllowList: []
