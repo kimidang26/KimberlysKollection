@@ -14,6 +14,6 @@ import pgPromise from 'pg-promise';
 // Create Database Connection
 const pgp = pgPromise({});
 
-const db = pgp('postgres://localhost:5432/clothingstore');
+const db = pgp(process.env.DATABASE_URL);
 
 export default db;

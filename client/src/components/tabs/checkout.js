@@ -3,6 +3,7 @@ import { useState } from "react";
 import Cart from './cart.js';
 import { useAuth0 } from "@auth0/auth0-react";
 
+
 const Checkout = () => {
     const [select, setSelect] = useState(null);
     const {user} = useAuth0();
