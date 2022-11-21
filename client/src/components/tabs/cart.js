@@ -64,6 +64,8 @@ const Cart = () => {
                   })}
             </div>
             <h3>Total:${sum.toFixed(2)}</h3>
+            {/* <br></br>
+            <p>Total Items ({cart.length})</p> */}
           </div>
       
     )

@@ -93,17 +93,15 @@ const handleSort = (evt) => {
   return (
     <div className='clothing-item-page'>
       <div className='user-place'>
-          {!user ? <a>"Welcome ! " </a>  : <span> Welcome Back {user.nickname} </span>}
+          {!user ? <a>"Welcome ! " </a>  : <span> <b>Welcome Back {user.nickname} !</b> </span>}
       </div>
     <div className="card-deck">
       <div className='card-header'>
-        <h1> Winter Season </h1>
-        <h3> Vol. 1 </h3>
-        <button>Total Items ({cart.length})</button>
+        <h1> Winter Season Vol. 1</h1>
         <div className='filter-condition'>
-          <h4>Sort By : </h4>
+          <h4><b>Sort By : </b> </h4>
           
-          <select onChange={handleSort}>
+          <select className="select-drop" onChange={handleSort}>
             <option value='clear' name= 'price_sort' >Default</option>
             <option value='asc' name='price_sort' >Price: Low to High</option>
             <option value='desc' name='price_sort' >Price: High to Low</option>
@@ -116,7 +114,7 @@ const handleSort = (evt) => {
         <div className="card-display">
               {shirts.map((shirt, index) => {
               return (
-                <div className="card-group" key ={shirt.id}>
+                <div className="card-group-face" key ={shirt.id}>
                   <div className="card">
                     <img className="card-img-top" src={shirt.image} alt="Card image cap" />
                     <div className="card-body">
