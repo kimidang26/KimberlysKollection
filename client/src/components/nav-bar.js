@@ -12,6 +12,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 
 const NavBar = ({displayVideo}) => {
 
+  const {user} = useAuth0();
 
 
   return (
@@ -58,7 +59,7 @@ const NavBar = ({displayVideo}) => {
   {displayVideo ? (<iframe
         width="1500"
         height="1000"
-        src="https://www.youtube.com/embed/YKaiXY7zHxk?controls=0&autoplay=1&mute=1&rel=0&loop=1"
+        src="https://www.youtube.com/embed/YKaiXY7zHxk?start=4&end=42&autoplay=1&loop=1&rel=0&controls=0&playlist=YKaiXY7zHxk&mute=1"
         title="YouTube video player"
         loop = {true}
         autoPlay = {true}
