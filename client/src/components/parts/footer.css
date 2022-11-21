@@ -1,12 +1,32 @@
 .footer{
     background-color: #f4e9e0;
-    color: white;
+    color: black;
     height: 200px;
     padding-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Arial', cursive;
+    font-family: 'Raleway', sans-serif;
     font-size: 40px;
     
 }
+
+.media-icons{
+    display: flex;
+    flex-direction: row;
+    float:none;
+    padding: 6px;
+    margin-bottom: 15px;
+  }
+  
+  .twitter-icons{
+    padding: 20px;
+  }
+  
+  .tiktok-icons{
+    padding: 20px;
+  }
+  
+  .ig-icons{
+    padding: 20px;
+  }
