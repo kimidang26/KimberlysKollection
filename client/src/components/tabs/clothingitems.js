@@ -91,6 +91,10 @@ const handleSort = (evt) => {
 
 
   return (
+    <div className='clothing-item-page'>
+      <div className='user-place'>
+          {!user ? <a>"Welcome ! " </a>  : <span> Welcome Back {user.nickname} </span>}
+      </div>
     <div className="card-deck">
       <div className='card-header'>
         <h1> Winter Season </h1>
@@ -128,6 +132,7 @@ const handleSort = (evt) => {
 
         </div>
     </div>
+  </div>
 
   )
 }

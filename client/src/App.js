@@ -32,7 +32,8 @@ function App() {
         <NavBar displayVideo = {isHomePage} />
         <br></br>
         <div className="container flex-grow-1">
-            {!user ? <a>"Welcome ! " </a>  : <span> Welcome Back <Link to="api/me">{user.nickname}</Link> </span>}
+        
+            {/* {!user ? <a>"Welcome ! " </a>  : <span> Welcome Back <Link to="api/me">{user.nickname}</Link> </span>} */}
             <Routes>
               <Route path="/" element ={<Home />} />
               <Route path="/api/me" element ={<Profile user={user}/>} />
@@ -40,7 +41,7 @@ function App() {
               <Route path="/cart" element={<Checkout />} />
               <Route path="/history" element={<History />} />
             </Routes>
-            
+        
         </div>
 
       <Footer />
