@@ -55,7 +55,7 @@ const Cart = () => {
                       <img className="card-img-top" src={clothes.img} alt="Card image cap" />
                       <div className="card-body">
                         {/* <h5 className="card-title">{clothes.title}</h5> */}
-                        <p className="card-text">Price: ${clothes.price}</p> 
+                        <p className="card-text">Price: ${Number(clothes.price).toFixed(2)}</p> 
                         <button onClick={() => handleDeleteItem(clothes.items_id)}>DELETE</button>
                       </div>
                       </div>
