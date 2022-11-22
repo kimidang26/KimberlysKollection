@@ -100,8 +100,8 @@ nav a:hover {
 
  }
 
- .button.btn-btn-default{
-    color: aqua;
+.button.btn-btn-default{
+    background-color: blue;
     font-family:'Raleway', sans-serif;
     font-size: 30px;
 

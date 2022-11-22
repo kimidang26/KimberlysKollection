@@ -2,13 +2,13 @@
 
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
-import "../components/nav-bar.css";
+import "./logout-button.css";
 
 const LoginButton = () => {
   const { loginWithRedirect } = useAuth0();
   return (
     <button
-      className="btn btn-default"
+      className="w3-button w3-brown"
       onClick={() => loginWithRedirect()}
     >
       Log In
