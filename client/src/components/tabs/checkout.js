@@ -43,10 +43,11 @@ const Checkout = () => {
     if (select === true) {
         displayTyMessage = (
             <div className='Thanks-Message'>
-                <h2> Your order is in! Thank you for shopping at A+ Clothing Store. See you soon!</h2>
+                <h2> Your order is in! Thank you for shopping at Kimberly's Kollection. See you soon!</h2>
                 <br/>
                 <br />
                 <a href="http://localhost:4000/"><button>Back to Home</button></a>
+                <br></br>
             </div>
         )
     } else {
@@ -63,6 +64,7 @@ const Checkout = () => {
   return (
     <div className="checkout_page">
       {displayTyMessage}
+      <br></br>
     </div>
   );
 };
