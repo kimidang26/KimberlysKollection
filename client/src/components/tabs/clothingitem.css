@@ -8,6 +8,9 @@
     padding-left: 120px;
      
 }
+.card:hover{
+ transform: scale(1.2);
+} 
 
 .shipping img{
     width: 100%;

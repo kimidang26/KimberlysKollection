@@ -1,7 +1,7 @@
 .header--with-video{
   height: 700px;
-  position: relative;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .nav-container{
