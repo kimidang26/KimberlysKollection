@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "./clothingitem.css";
 import { useAuth0 } from "@auth0/auth0-react";
 import AuthenticationButton from "../authentication-button.js"
+import shipping from "../../images/shipping.png"
 
  
 
@@ -92,6 +93,9 @@ const handleSort = (evt) => {
 
   return (
     <div className='clothing-item-page'>
+      <div className='shipping'>
+        <img src={shipping} alt="shipping logo" />
+      </div>
       <div className='user-place'>
           {!user ? <a>"Welcome ! " </a>  : <span> <b>Welcome Back {user.nickname} !</b> </span>}
       </div>
@@ -118,9 +122,9 @@ const handleSort = (evt) => {
                   <div className="card">
                     <img className="card-img-top" src={shirt.image} alt="Card image cap" />
                     <div className="card-body">
-                      <h5 className="card-title">{shirt.title}</h5>
+                      {/* <h5 className="card-title">{shirt.title}</h5> */}
                       <p className="card-text">Rating: {shirt.rating.rate}</p>
-                      <p className="card-text">Price: {shirt.price}</p> 
+                      <p className="card-text">Price: $ {shirt.price.toFixed(2)}</p> 
                       <button onClick={() => addToCart(shirt)}>Add to Cart</button>
                     </div>
                   </div>
