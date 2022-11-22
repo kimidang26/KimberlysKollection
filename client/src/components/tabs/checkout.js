@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from "react";
 import Cart from './cart.js';
 import { useAuth0 } from "@auth0/auth0-react";
+import "../tabs/checkout.css";
 
 
 const Checkout = () => {
@@ -41,7 +42,7 @@ const Checkout = () => {
     //if Purchase/Select button is not empty (is clicked) show the message
     if (select === true) {
         displayTyMessage = (
-            <div>
+            <div className='Thanks-Message'>
                 <h2> Your order is in! Thank you for shopping at A+ Clothing Store. See you soon!</h2>
                 <br/>
                 <br />
@@ -54,6 +55,7 @@ const Checkout = () => {
                 <Cart />
                 {/* <h3>Total:  </h3> */}
                 <button className="purchase" onClick={changeOrder}>Purchase </button>
+                <br></br>
             </div>
         )
     }
