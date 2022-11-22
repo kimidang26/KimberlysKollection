@@ -46,7 +46,7 @@ const Cart = () => {
 // if user not logged in then show them auth 0
     return (
       <div className="card-deck" >
-            <h1> This is a Cart component </h1>
+            <h1> {user.nickname}'s Shopping Cart </h1>
             <div className="card-display">
                   {cart.map((clothes, index) => {
                   return (
@@ -54,8 +54,8 @@ const Cart = () => {
                       <div className="card">
                       <img className="card-img-top" src={clothes.img} alt="Card image cap" />
                       <div className="card-body">
-                        <h5 className="card-title">{clothes.title}</h5>
-                        <p className="card-text">Price: {clothes.price}</p> 
+                        {/* <h5 className="card-title">{clothes.title}</h5> */}
+                        <p className="card-text">Price: ${Number(clothes.price).toFixed(2)}</p> 
                         <button onClick={() => handleDeleteItem(clothes.items_id)}>DELETE</button>
                       </div>
                       </div>
@@ -63,7 +63,10 @@ const Cart = () => {
                   );
                   })}
             </div>
-            <h3>Total:${sum.toFixed(2)}</h3>
+            <div className='total'>
+              <h3>Total:${sum.toFixed(2)}</h3>
+              <h3>Total Items ({cart.length})</h3>
+            </div>
           </div>
       
     )

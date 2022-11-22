@@ -1,70 +1,172 @@
-# Getting Started with Create React App
+# Kimberly's Kollection Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+ <img src="./client/src/images/KK_Logo.png" width="200">
+ </p>
 
-## Available Scripts
+## Kollection Store - Overview
+An application where consumers can purchase clothing items for school, they can sort products and see the history of past orders.  
 
-In the project directory, you can run:
 
-### `npm start`
+### Techstack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<table align="center">
+  <tr>
+    <td align="center" width="96">
+        <img src="https://user-images.githubusercontent.com/74997368/168923681-ece848fc-5700-430b-957f-e8de784e9847.png" width="48" height="48" alt="html" />
+      <br>html
+    </td>
+    <td align="center" width="96">
+        <img src="https://user-images.githubusercontent.com/74997368/168924521-589f95da-069a-496a-bcc1-ee6dd132ff12.png" width="48" height="48" alt="CSS" />
+      <br>CSS
+    </td>
+    <td align="center" width="96">
+        <img src="https://user-images.githubusercontent.com/74997368/168977094-6a5073a2-2f48-4f5a-ae0e-ed1421a678c6.png" width="48" height="48" alt="JavaScript" />
+      <br>JavaScript
+    </td>
+    <td align="center" width="96">
+        <img src="https://user-images.githubusercontent.com/74997368/168976819-15a1f4e0-29cf-4ac0-94a7-1f15eee374a1.png" width="48" height="48" alt="postgreSQL" />
+      <br>postgreSQL
+    </td>
+    <td align="center" width="96">
+        <img src="https://user-images.githubusercontent.com/74997368/168978951-5ac2af5e-c911-4e59-b493-683071cf1860.png" width="48" height="48" alt="Express" />
+      <br>Express
+    </td>
+    </tr>
+  <tr>
+    <td align="center" width="96">
+        <img src="https://user-images.githubusercontent.com/74997368/168979311-4a486cad-32c8-46f4-a5da-912fdc51b2d6.png" width="48" height="48" alt="React" />
+      <br>React
+    </td>
+    <td align="center" width="96">
+        <img src="https://user-images.githubusercontent.com/74997368/168979848-733f7090-0f78-401a-9ceb-4267231abef7.png" width="48" height="48" alt="Node" />
+      <br>Node
+    </td>
+    <td align="center" width="96">
+        <img src="https://user-images.githubusercontent.com/74997368/168980647-1690f9de-bf0e-4318-93cb-1b2ba3701ded.png" width="48" height="48" alt="Bootstrap" />
+      <br>Bootstrap
+    </td>
+    <td align="center" width="96">
+        <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/j8z02ssteea4zj1k1nyz" width="48" height="48" alt="Render" />
+      <br>Render
+    </td>
+  </tr>
+</table>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### APIs
+<table align="center">
+  <tr>
+    <td align="center" width="96">
+      <img src="https://fakestoreapi.com/icons/logo.png" width="48" height="48" alt="nps-api" />
+    </td>
+    <td align="center" width="96">
+       <img src="https://user-images.githubusercontent.com/74997368/168984679-a7fa607e-2a9a-46c8-91a6-9a9e77501dbd.png" width="48" height="48" alt="auth0" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="96">
+      <br>Fake Store API
+    </td>
+    <td align="center" width="96" >
+      <br>Auth0
+    </td>
+  </tr>
+</table>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Drawing Board
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Style Guide
+<br/>
+<div align="center">
+<img src="https://i.postimg.cc/W3Pn1Lq0/Style.png" width="300" height="auto" alt="auth0" />
+</div>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Wireframe
+<br/>
+<div align="center">
+<img src="https://i.postimg.cc/SQ5TF810/Wireframe.png" width="900" height="auto" alt="auth0" />
+</div>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Data Model
+<br/>
+<div align="center">
+<img src="https://i.postimg.cc/prvwDFw1/Data-Table.png" width="700" height="auto" alt="auth0" />
+</div>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### User Flow
+<br/>
+<div align="center">
+<img src="https://i.postimg.cc/R0GZYvRF/UserFlow.png" width="500" height="auto" alt="auth0" />
+</div>
 
-## Learn More
+<br/>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Installation
+<br/>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Prereq:
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Node: You'll need to install Node v14 or above. nvm is highly recommended.
 
-### Analyzing the Bundle Size
+<br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Installation
 
-### Making a Progressive Web App
+1. Clone the repo: 
+```
+git clone https://github.com/kimidang26/StoreProject_FinalProject.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. Install all NPM packages using this in the root directory:
+    ```
+    npm install
+    ```
+3. Database setup:
+    - Copy the root example environment file
+        ```
+         cp .env.example .env
+         ```
+      
+    - You can choose to edit .env or just use as-is.
+    - Run the following to setup the database with the seed file:
+         ```
+        npm run db:init
+         ```
+4. Start the app and view it at http://localhost:4000 by using:    
+    ```
+    npm start
+    ```
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Set Up React client for auth0
+If you want to try it with Auth0, the frontend needs to be setup with the following:
 
-### Deployment
+1. Copy the app's example environment file
+    ```
+    cp app/.env.example app/.env
+    ```
+    - The .env file allows the React app to use Auth0, and requires an Auth0 domain + client-id.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+2. The .env file allows the React app to use Auth0, and requires an Auth0 domain + client-id.
+    - These can be obtained by signing up for an Auth0 account and Registering a Single-Page Web Application in order to get these values
+    - This graphic from Auth0's guide may be helpful to locating them
 
-### `npm run build` fails to minify
+## Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To run tests on the terminal:
+* On client side run the following command:
+    ```
+    npm test
+    ```
+
+## Future Development
+- Allow users to add to cart without logging in until submitting cart
+- Using a payment functionality
+- Adding more clothing items

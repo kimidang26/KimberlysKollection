@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth0 } from "@auth0/auth0-react";
+import "../tabs/orderhistory.css";
 
 
 
@@ -33,6 +34,7 @@ useEffect(() => {
     return (
       <div className="order_history">
       <h1>Order History</h1>
+      <br></br>
       <table>
         <thead>
           <tr>

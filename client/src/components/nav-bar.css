@@ -1,7 +1,7 @@
 .header--with-video{
   height: 700px;
-  position: relative;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .nav-container{
@@ -18,8 +18,8 @@
 
 
 .brand-logo img{
-    height: 200px;
-    width: 200px;
+    height: 213px;
+    width: 254px;
 }
 .nav-links {
 display: block;
@@ -43,6 +43,8 @@ text-decoration: none;
     padding: 10px;
     border-radius: 3px;
     transition: 0.3s ease all;
+    font-family:'Raleway', sans-serif;
+    font-weight: bold;
 }
 
 nav a:hover {
@@ -81,7 +83,8 @@ nav a:hover {
 
 
  nav .logo{
-    width: 80px;
+    width: 100px;
+    height: 100px;
  }
 
  nav ul li {
@@ -94,6 +97,14 @@ nav a:hover {
     text-decoration: none;
     color : #fff;
     font-size: 17px;
+
+ }
+
+.button.btn-btn-default{
+    background-color: blue;
+    font-family:'Raleway', sans-serif;
+    font-size: 30px;
+
 
  }
 
@@ -120,6 +131,7 @@ nav a:hover {
    position: fixed;
    top: 0;
    left: 0;
+   z-index: -1;
 
  }
 
@@ -134,3 +146,5 @@ nav a:hover {
    align-items: center;
    color: white;
  }
+
+ 

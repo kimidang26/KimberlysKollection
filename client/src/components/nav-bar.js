@@ -57,12 +57,13 @@ const NavBar = ({displayVideo}) => {
       </div>
  {/* // only display if displayvideo is true, create ternary */}
   {displayVideo ? (<iframe
-        width="1500"
+        width= "100%"
         height="1000"
-        src="https://www.youtube.com/embed/YKaiXY7zHxk?start=4&end=42&autoplay=1&loop=1&rel=0&controls=0&playlist=YKaiXY7zHxk&mute=1"
+        src="https://player.vimeo.com/video/262966028?h=dc522a4d73&autoplay=1&loop=1&muted=1"
         title="YouTube video player"
         loop = {true}
         autoPlay = {true}
+        muted = {true}
         frameBorder="10"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen = {true}
