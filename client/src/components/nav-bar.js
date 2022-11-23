@@ -37,7 +37,7 @@ const NavBar = ({displayVideo}) => {
                 </li>
 
                 <li>
-                  <NavLink to="/clothing"> Clothes</NavLink>
+                  <NavLink to="/clothing"> Shop</NavLink>
                 </li>
                       
                   <li>
