@@ -2,18 +2,32 @@
     align-items: flex-end;
     float: right;
     border-radius: 4px;
-    background-color: rgb(153, 109, 71);
+    /* background-color: rgb(153, 109, 71); */
     font-family: 'Raleway', sans-serif; 
     font-weight: bolder;
     padding: 10px;
 }
 
-.purchase:hover{
+.purchase-home{
+        border-radius: 4px;
+        /* background-color: rgb(153, 109, 71); */
+        font-family: 'Raleway', sans-serif; 
+        font-weight: bolder;
+        padding: 10px;
+        padding-left: 432px;
+
+}
+
+.purchase a{
+    background-color: #f4e9e0;
+}
+
+/* .purchase:hover{
     background-color: white;
     font-family: 'Raleway', sans-serif; 
     font-weight: bolder;
     padding: 10px;
-}
+} */
 
 .Thanks-Message{
     align-items: center;
