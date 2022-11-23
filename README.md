@@ -120,26 +120,40 @@ An application where consumers can purchase clothing items for school, they can 
 ### Installation
 
 1. Clone the repo: 
-```
-git clone https://github.com/kimidang26/StoreProject_FinalProject.git
-```
+  ```
+    git clone https://github.com/kimidang26/StoreProject_FinalProject.git
+   ```
+2. Take out the owner's git:
+    ```
+    git init
+    ```
 
-2. Install all NPM packages using this in the root directory:
+3. Go to server folder 
+    ```
+    cd server
+    ```
+
+4. Install all NPM packages using this in the root directory:
     ```
     npm install
     ```
-3. Database setup:
-    - Copy the root example environment file
+5. Database setup:
+    - Inside your server folder, create an .env file with:
         ```
-         cp .env.example .env
+         touch .env
          ```
       
-    - You can choose to edit .env or just use as-is.
-    - Run the following to setup the database with the seed file:
+    - Inside your .env add:
+        ```
+         postgres://localhost:5432/clothingstore
          ```
-        npm run db:init
+    - Go Back to Terminal
+
+    - Run the following to restore the DB dump file that the project already contain:
          ```
-4. Start the app and view it at http://localhost:4000 by using:    
+        psql -U postgres -f db.sql
+         ```
+6. Start the app by using in client and server folder:    
     ```
     npm start
     ```
@@ -165,6 +179,22 @@ To run tests on the terminal:
     ```
     npm test
     ```
+
+
+## Mock Users (CAN BE USED TO TEST SITE)
+
+
+  <table align="center">
+  <tr>
+    <th>EMAIL</th>
+    <th>PASSWORD</th>
+  </tr>
+  <tr>
+    <td>test.kimberly9@gmail.com</td>
+     <td>techtonica1</td>
+  </tr>
+</table>
+
 
 ## Future Development
 - Allow users to add to cart without logging in until submitting cart
