@@ -41,7 +41,7 @@ const NavBar = ({displayVideo}) => {
                 </li>
                       
                   <li>
-                      <NavLink to="/cart"> Checkout</NavLink>
+                      <NavLink to="/cart"> Cart</NavLink>
                   </li> 
                   <li>
                       <NavLink to="/history"> Order History</NavLink>

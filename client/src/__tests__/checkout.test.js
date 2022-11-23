@@ -1,7 +1,7 @@
 import { render, screen, cleanup } from "@testing-library/react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { mocked } from "jest-mock";
-import Items from "../components/tabs/clothingitems.js"
+import Checkout from "../components/tabs/checkout";
 
 
 // test('first test', () => {
@@ -43,20 +43,11 @@ describe("Test", () => {
         });
     });
 
-    test("User info is read", () => {
-        render(<Items user={user} />);
 
-    });
-    test("render Clothing Items", () => {
-        render(<Items />)
-    })
-
-    test('should render component stuff', () => {
-        render(<Items />)
-        expect(screen.getByText(/Winter/))
+    test("render Checkout Items", () => {
+        render(<Checkout />)
     })
 
     
 });
-
 
