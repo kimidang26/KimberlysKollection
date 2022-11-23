@@ -1,7 +1,9 @@
-import { render, screen, cleanup } from "@testing-library/react";
+import { screen, cleanup } from "@testing-library/react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { mocked } from "jest-mock";
-import Items from "../components/tabs/clothingitems.js"
+import Items from "../components/tabs/clothingitems.js";
+import { render, unmountComponentAtNode } from "react-dom";
+import { act } from "react-dom/test-utils";
 
 
 // test('first test', () => {
@@ -27,6 +29,20 @@ afterEach(() => {
     cleanup();
 })
 
+let container = null;
+
+beforeEach(() => {
+    // setup a DOM element as a render target
+    container = document.createElement("div");
+    document.body.appendChild(container);
+  });
+
+  afterEach(() => {
+    // cleanup on exiting
+    unmountComponentAtNode(container);
+    container.remove();
+    container = null;
+  });
 
 describe("Test", () => {
     beforeEach(() => {
@@ -41,20 +57,45 @@ describe("Test", () => {
             loginWithPopup: jest.fn(),
             isLoading: false,
         });
+        global.fetch = jest.fn(() =>
+        Promise.resolve({
+        json: () => Promise.resolve([{
+            "id": 1,
+            "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+            "price": 109.95,
+            "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+            "category": "men's clothing",
+            "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+            "rating": {
+            "rate": 3.9,
+            "count": 120
+            }
+            }]),
+  })
+);
     });
 
-    test("User info is read", () => {
-        render(<Items user={user} />);
 
-    });
-    test("render Clothing Items", () => {
-        render(<Items />)
+    // test("User info is read", () => {
+    //     render(<Items user={user} />);
+
+    // });
+    test("render Clothing Items", async() => {
+        await act(async () => {
+            render(<Items  />, container)
+            
+        })
+        console.log(container.innerHTML);
+        expect(container.querySelectorAll(".card").length).toBe(1);
     })
 
-    test('should render component stuff', () => {
-        render(<Items />)
-        expect(screen.getByText(/Winter/))
-    })
+    // test('should render component stuff', () => {
+    //     render(<Items />)
+    //     expect(screen.getByText(/Winter/))
+    // })
+
+
+
 
     
 });
