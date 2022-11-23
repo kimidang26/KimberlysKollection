@@ -3,6 +3,7 @@ import { useState } from "react";
 import Cart from './cart.js';
 import { useAuth0 } from "@auth0/auth0-react";
 import "../tabs/checkout.css";
+import { Link } from "react-router-dom";
 
 
 const Checkout = () => {
@@ -46,7 +47,7 @@ const Checkout = () => {
                 <h2> Your order is in! Thank you for shopping at Kimberly's Kollection. See you soon!</h2>
                 <br/>
                 <br />
-
+                <p>Click <Link to="/">Here</Link> to go back to home.</p>
                 <br></br>
             </div>
         )
