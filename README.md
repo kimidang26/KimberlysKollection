@@ -122,8 +122,8 @@ https://server-18j2.onrender.com
 ### Installation
 
 1. Clone the repo: 
-  ```
-    git clone https://github.com/kimidang26/StoreProject_FinalProject.git
+   ```
+   git clone https://github.com/kimidang26/KimberlysKollection.git
    ```
 2. Take out the owner's git:
     ```
