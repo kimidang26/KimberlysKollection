@@ -46,7 +46,7 @@ const Checkout = () => {
                 <h2> Your order is in! Thank you for shopping at Kimberly's Kollection. See you soon!</h2>
                 <br/>
                 <br />
-                <a href="http://localhost:4000/"><button>Back to Home</button></a>
+
                 <br></br>
             </div>
         )
