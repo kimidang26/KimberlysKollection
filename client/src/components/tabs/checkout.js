@@ -47,7 +47,7 @@ const Checkout = () => {
                 <h2> Your order is in! Thank you for shopping at Kimberly's Kollection. See you soon!</h2>
                 <br/>
                 <br />
-                <p>Click <Link to="/">Here</Link> to go back to home.</p>
+                <p className='purchase-home'>Click <Link to="/">Here</Link> to go back to home.</p>
                 <br></br>
             </div>
         )
